@@ -8,24 +8,49 @@ from django.urls import reverse
 from .forms import *
 from django.contrib.auth import authenticate, login, logout
 import requests
+import json
+
 # Create your views here.
 
 def home(request):
     return render(request, 'futures_new_order.html')
 def new_futures(request):
     if request.method=="POST":
-        form=new_futures(request.POST)
+        form=futures(request.POST)
         if form.is_valid():
-            futures_item=form.save(commit=False)
-            # host=form.cleaned_data.get("host")
-            # host_instance= get_object_or_404(Host, name=host)
-            # visitor_item.host=host_instance
-            # visitor_item.save()
-            print(futures_item.host.__dict__)
-            context={
-                'visitor':futures_item,
+            visitor_item=form.save(commit=False)
+            CropName=form.cleaned_data.get("Crop")
+            CropVariety=form.cleaned_data.get("CropVariety")
+            Quantity=form.cleaned_data.get("Quantity")
+            DeliveryDate=form.cleaned_data.get("DeliveryDate")
+            AdvanceDate=form.cleaned_data.get("AdvanceDate")
+            ProductionMode=form.cleaned_data.get("ProductionMode")
+            ContractPrice=form.cleaned_data.get("ContractPrice")
+            advance=form.cleaned_data.get("advance")
+            print(DeliveryDate)
+            print(visitor_item.__dict__)
+            data={"Quantity":Quantity,
+            "DeliveryDate":"2019-11-23",
+            "ProductionMode":ProductionMode,
+            "ContractPrice":ContractPrice,
+            "advance":advance,
+            "AdvanceDate":"2019-11-23"
+            
             }
-            return render(request, 'visiting.html',context)
+            data=json.dumps(data)
+            headers = {
+                        "Content-Type": "application/json",
+                        "accept": "application/json",
+                       'Authorization': 'JWT '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InJhamEiLCJleHAiOjE1NzQ0NTU4MTksImVtYWlsIjoic2hpdmFtZ3VwdGFoZHI5OEBnbWFpbC5jb20ifQ.bpScWzggOlvnNUMa4nM1aV2ikk72X_3L3eT_mRRdy10', 
+    #   Authorization: `JWT ${localStorage.getItem('token')}`,
+    }
+
+            print(data)
+            API_ENDPOINT='http://localhost:8000/order/futurecontract/' +str(CropName)+'/'+str(CropVariety)+'/'
+            r = requests.post(url = API_ENDPOINT, data = data, headers=headers) 
+            pastebin_url = r.content
+            print("The pastebin URL is:%s"%pastebin_url) 
+            return HttpResponse('<h1>hweuwe</h1>')
     else:
-        form=Add_Visitor(request.POST or None, request.FILES or None)
-    return render(request,'new_file.html',{'form':form})
+        form=futures(request.POST or None, request.FILES or None)
+    return render(request,'future/index.html',{'form':form})
