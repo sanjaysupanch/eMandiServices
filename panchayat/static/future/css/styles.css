@@ -1,0 +1,2160 @@
+
+#toggle-switcher {
+	display: block;
+	position: absolute;
+	top: 35px;
+	left: -40px;
+	width: 40px;
+	height: 41px;
+	border: 1px solid #52555f;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	border-right: none;
+	background: #52555f;
+	text-align: center;
+	cursor: pointer;
+}
+
+#toggle-switcher img.style-gear {
+	width: 47x;
+	height: 47px;
+	margin-top: -4px;
+	margin-left: -4px;
+}
+
+#style-switcher {
+	position: fixed;
+	z-index: 1000;
+	top: 80px;
+	right: -240px;
+	width: 240px;
+	padding: 10px 10px 12px 10px;
+	border: 1px solid #52555f; 
+	border-radius: 2px;
+	background: #52555f;
+}
+
+#style-switcher .style-switcher-cell {
+	display: inline-block;
+	width: 94px;
+	margin: 0px 6px 0px 6px;
+}
+
+#style-switcher .style-switcher-cell img {
+	display: inline-block;
+	width: 65px;
+	height: 57px;
+	margin-top: 0px;
+	border-radius: 2px;
+}
+
+#style-switcher h1 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #fff;
+	font: 300 20px/1.9em "Ubuntu", sans-serif;
+	text-align: center;
+}
+
+#style-switcher .style-switcher-cell a {
+	display: block;
+	margin-top: 7px;
+	color: #fff;
+	opacity: 0.8;
+	font: 300 13px/1.3em "Ubuntu", sans-serif;
+	text-decoration: none; 	
+	text-align: center;
+	-o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#style-switcher .style-switcher-cell:hover a {
+	opacity: 1;
+}
+
+#style-switcher .style-switcher-cell.active a {
+	opacity: 1;
+}
+
+#style-switcher .style-switcher-buttons {
+	margin: 13px auto 8px auto;
+	text-align: center;
+}
+
+#style-switcher .style-switcher-buttons a {
+	display: inline-block;
+	margin-right: 3px;
+	margin-left: 3px;
+	padding: 8px 23px 6px 23px;
+	font: 500 11px/1.3em "Ubuntu", sans-serif;
+	text-align: center;
+	text-decoration: none;
+	-o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#style-switcher a.style-switcher-back-button {
+	border: 1px solid #fff;
+	border-radius: 25px;
+	color: #fff;
+}
+
+#style-switcher a.style-switcher-back-button:hover {
+	background-color: #fff;
+	color: #52555f;
+}
+
+#style-switcher a.style-switcher-buy-button {
+	border: 1px solid #00bb5c;
+	border-radius: 25px;
+	background-color: #00bb5c;
+	color: #fff;
+}
+
+#style-switcher a.style-switcher-buy-button:hover {
+	border: 1px solid #00bb5c;
+	background-color: transparent;
+	color: #fff;
+}
+
+
+/******************************/
+/*     01. GENERAL STYLES     */
+/******************************/
+body {
+	color: #fff;
+	font: 300 16px/1.6em "Ubuntu", sans-serif;
+}
+
+h1 {
+	font: 500 38px/1.1em "Ubuntu", sans-serif;
+}
+
+h2 {
+	font: 500 36px/1.1em "Ubuntu", sans-serif;
+}
+
+h3 {
+	font: 500 26px/1.2em "Ubuntu", sans-serif;
+}
+
+h4 {
+	font: 500 22px/1.4em "Ubuntu", sans-serif;
+}
+
+h5 {
+	font: 500 20px/1.5em "Ubuntu", sans-serif;
+}
+
+p {
+	font: 300 16px/1.6em "Ubuntu", sans-serif;
+}
+
+p.seventy-percent-width {
+	width: 100%;
+	text-align: center;
+}
+
+a {
+	color: #00bb5c;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+img.decorative-line {
+	display: block;
+	width: 94px;
+	height: 8px;
+	margin: 15px auto 30px auto;
+}
+
+.button-solid {
+	display: inline-block;
+	max-width: 250px;
+	height: 42px;
+	padding-right: 34px;
+	padding-left: 34px;
+	border: 1px solid #00bb5c;
+	border-radius: 50px;
+	background-color: #00bb5c;
+	color: #fff;
+	font: 500 15px/40px "Ubuntu", sans-serif;
+	transition: border .3s ease, background-color .3s ease, color .3s ease;
+}
+
+.button-solid.large {
+	height: 54px;
+	margin-top: 20px;
+	padding-right: 38px;
+	padding-left: 38px;
+	border: 1px solid #00bb5c;
+	border-radius: 50px;
+	background-color: #00bb5c;
+	font: 500 18px/51px "Ubuntu", sans-serif;
+}
+
+.button-solid:hover,
+.button-solid.large:hover {
+	border: 1px solid #25c86a;
+	background-color: transparent;
+	color: #fff;
+	text-decoration: none;
+}
+
+.button-outline {
+	display: inline-block;
+	max-width: 250px;
+	height: 42px;
+	padding-right: 34px;
+	padding-left: 34px;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	background-color: transparent;
+	color: #fff;
+	font: 500 15px/40px "Ubuntu", sans-serif;
+	transition: border .3s ease, background-color .3s ease, color .3s ease;
+}
+
+.button-outline:hover {
+	border: 1px solid #25c86a;
+	background-color: #25c86a;
+}
+
+.form-control-input {
+	height: 40px;
+	width: 100%;
+	padding-left: 10px;
+	background-color: #52555f;
+	border: 1px solid #52555f;
+	border-radius: 4px;	
+	color: #fff;
+	font: 300 16px/1.6em "Ubuntu", sans-serif;
+	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
+}
+
+.form-control-textarea {
+	width: 100%;
+	padding-left: 10px;
+	border: 1px solid #52555f;
+	border-radius: 4px;
+	background-color: #52555f;
+	color: #fff;
+	font: 300 16px/1.6em "Ubuntu", sans-serif;
+}
+
+.form-control-submit-button {
+	display: block;
+	width: 100%;
+	height: 40px;
+	border: 1px solid #00bb5c;
+	border-radius: 4px;
+	background-color: #00bb5c;
+	color: #fff;
+	font: 500 16px/36px "Ubuntu", sans-serif;
+	transition: background-color .3s ease, color .3s ease;
+}
+
+.form-control-submit-button:hover {
+	background-color: transparent;
+	color: #fff;
+}
+
+.form-control-input::-webkit-input-placeholder,
+.form-control-textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #fff;
+	opacity: 0.7;
+}
+
+.form-control-input:-moz-placeholder,
+.form-control-textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   	color: #fff;
+	opacity: 0.7;
+}
+
+.form-control-input::-moz-placeholder,
+.form-control-textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #fff;
+	opacity: 0.7;
+}
+
+.form-control-input:-ms-input-placeholder,
+.form-control-textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   	color: #fff;
+	opacity: 0.7;
+}
+
+/* Form Success And Error Message Formatting */
+#msgSubmit.h3.text-center.tada.animated.text-success,
+#cmsgSubmit.h3.text-center.tada.animated.text-success,
+#msgSubmit.h3.text-center.text-danger,
+#cmsgSubmit.h3.text-center.text-danger {
+	margin-top: 12px;
+	margin-bottom: 8px;
+	color: #fff;
+	font: 300 18px/1em "Ubuntu", sans-serif;
+}
+
+#cmsgSubmit.h3.text-center.tada.animated.text-success,
+#cmsgSubmit.h3.text-center.text-danger {
+	display: block;
+}
+
+.help-block.with-errors {
+	margin-top: 6px;
+	margin-bottom: 0px;
+	color: #ff3d39;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+.help-block.with-errors ul {
+	margin-bottom: 0px;
+}
+
+/* Form Success And Error Message Animation From Animate.css */
+@-webkit-keyframes tada {
+	from {
+		-webkit-transform: scale3d(1, 1, 1);
+		-ms-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+
+	10%, 20% {
+		-webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+		-ms-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+		transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+	}
+
+	30%, 50%, 70%, 90% {
+		-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+		-ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+	}
+
+	40%, 60%, 80% {
+		-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+		-ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+	}
+
+	to {
+		-webkit-transform: scale3d(1, 1, 1);
+		-ms-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes tada {
+	from {
+		-webkit-transform: scale3d(1, 1, 1);
+		-ms-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+
+	10%, 20% {
+		-webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+		-ms-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+		transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+	}
+
+	30%, 50%, 70%, 90% {
+		-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+		-ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+	}
+
+	40%, 60%, 80% {
+		-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+		-ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+	}
+
+	to {
+		-webkit-transform: scale3d(1, 1, 1);
+		-ms-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.tada {
+	-webkit-animation-name: tada;
+	animation-name: tada;
+}
+
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+/* end of form success and error message animation from Animate.css */
+
+
+/* Fade-move Animation For Instructor Details Lightbox */
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+	opacity: 0;
+	transition: all 0.2s ease-out;
+	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+	opacity: 0;
+	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+/* end of fade-move animation for instructor details lightbox */
+
+
+/* Fade Animation For Image Swiper Gallery */
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	-webkit-animation: fadeIn 0.6s;
+	animation: fadeIn 0.6s;
+}
+
+@-webkit-keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.fadeOut {
+	-webkit-animation: fadeOut 0.8s;
+	animation: fadeOut 0.8s;
+}
+/* end of fade animation for image swiper gallery */
+
+
+/*************************/
+/*     02. PRELOADER     */
+/*************************/
+.spinner-wrapper {
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(26, 27, 32, 1);
+}
+
+.spinner {
+	position: absolute;
+	top: 50%; /* centers the loading animation vertically one the screen */
+	left: 50%; /* centers the loading animation horizontally one the screen */
+	width: 60px;
+	height: 20px;
+	margin: -10px 0 0 -30px; /* is width and height divided by two */ 
+	text-align: center;
+}
+
+.spinner > div {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 100%;
+	background-color: #fff;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+		-webkit-transform: scale(0); 
+	}
+	
+	40% {
+		-webkit-transform: scale(1.0);
+	}
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	}
+	
+	40% { 
+		-webkit-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+
+
+/**************************/
+/*     03. NAVIGATION     */
+/**************************/
+.navbar {
+	border-bottom: 1px solid #1a1b20;
+	background: #1a1b20;
+}
+
+.navbar .nav.navbar-nav {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.navbar .navbar-collapse {
+	border-top: none;
+}
+
+/* Logo */
+.navbar .navbar-brand {
+	margin-top: 6px;
+	margin-bottom: 6px;
+	padding-top: 12px;
+}
+
+.navbar .navbar-brand img {
+	width: 100px;
+	height: 26px;
+}
+
+/* Menu links */
+.navbar .nav.navbar-nav li a {
+	color: #fff;
+	opacity: 0.8;
+	font: 500 14px/1em "Ubuntu", sans-serif; 
+}
+
+.navbar .nav.navbar-nav li a:hover,
+.navbar .nav.navbar-nav li.active a {
+	background-color: transparent;
+	color: #fff;
+	opacity: 1;
+}
+
+/* Mobile menu toggle button - pressed */
+.navbar .navbar-toggle,
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:active,
+.navbar .navbar-toggle.collapsed:active {
+	margin-top: 16px;
+	border: 1px solid #fff;
+	background-color: #fff;
+}
+
+.navbar .navbar-toggle .icon-bar,
+.navbar .navbar-toggle:hover .icon-bar,
+.navbar .navbar-toggle:active .icon-bar,
+.navbar .navbar-toggle.collapsed:active .icon-bar {
+	background-color: #58637e;
+} 
+/* end of mobile menu toggle button - pressed */
+
+/* Mobile menu toggle button */
+.navbar .navbar-toggle.collapsed {
+	border: 1px solid transparent;
+	background-color: transparent;
+}
+
+.navbar .navbar-toggle.collapsed .icon-bar {
+	background-color: #fff;
+}
+/* end of mobile menu toggle button */
+
+/* Navbar in mobile mode on medium displays */
+.navbar-header {
+	float: none;
+}
+
+.navbar-left,.navbar-right {
+	float: none !important;
+}
+
+.navbar-toggle {
+	display: block;
+}
+
+.navbar-collapse.collapse {
+	display: none!important;
+}
+
+.navbar-nav > li {
+	float: none;
+}
+
+.navbar-right {
+	margin-right: 0px;
+}
+
+.collapse.in {
+	display: block !important;
+}
+
+.navbar-nav > li > a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+/* end of navbar in mobile mode on medium displays */
+
+
+/**********************/
+/*     04. HEADER     */
+/**********************/
+.header {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("../images/header-background.jpg") center no-repeat;
+	background-size: cover;
+}
+
+/* IE fix for vertical alignment in flex box */
+.header .flex-container-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%; 
+}
+
+.header .header-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	padding-top: 100px;
+	padding-bottom: 80px;
+	text-align: center;
+}
+
+.header .countdown {
+	font: 500 32px/0.5em "Ubuntu", sans-serif;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.header .countdown #clock .counter-number {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin-right: 12px;
+	padding-top: 33px;
+	margin-top: 15px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	background-color: transparent;
+	text-align: center;
+}
+
+.header .countdown #clock .separator {
+	display: none;
+	height: 30px;
+	vertical-align: top;
+	margin-top: 30px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.header .countdown #clock .timer-text {
+	font: 300 12px/1em "Ubuntu", sans-serif;
+	text-align: center;
+}
+
+.header p {
+	margin-top: 20px;
+	margin-right: 10px;
+	font: 300 20px/1.5em "Ubuntu", sans-serif;
+	text-align: center;
+}
+
+.header .form-control-input {
+	height: 42px;
+}
+
+.header .form-control-submit-button {
+	height: 46px;
+}
+
+/* Magnific Popup Terms And Conditions Content */
+.terms-and-conditions-container {
+	position: relative;
+	max-width: 1000px;
+	margin: 40px auto;
+	padding: 25px;
+	background: #24252c;
+	text-align: left;
+}
+
+.terms-and-conditions-container h3 {
+	margin-top: 0px;
+	text-align: center;
+}
+
+.terms-and-conditions-container h4 {
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+.terms-and-conditions-container hr {
+	width: 40px;
+	margin-top: 14px;
+	margin-bottom: 12px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #dcdcdc;
+}
+
+.terms-and-conditions-container ul {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-left: 30px;
+}
+
+.terms-and-conditions-container .highlight-box {
+	margin-top: 25px;
+	padding: 1px 23px 12px 23px;
+	background-color: #52555f;
+}
+
+.terms-and-conditions-container .highlight-box p {
+	margin-top: 16px;
+	margin-bottom: 8px;
+	font-style: italic;
+}
+
+.terms-and-conditions-container .buttons {
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.terms-and-conditions-container .button-outline {
+	margin-top: 25px;
+}
+
+.terms-and-conditions-container button.mfp-close.x-button {
+	position: absolute;
+	top: -5px;
+	right: 13px;
+	width: 10px;
+	height: 10px;
+	color: #fff;
+}
+
+.terms-and-conditions-container a.mfp-close.as-button {
+	position: relative;
+	width: auto;
+	margin-right: 4px;
+	color: #fff;
+	opacity: 1;
+}
+
+
+/****************************/
+/*     05. TESTIMONIALS     */
+/****************************/
+.testimonials {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: #24252c; 
+	text-align: center;
+}
+
+.testimonials img {
+	width: 90px;
+	height: 90px;
+	margin-top: 40px;
+}
+
+.testimonials .carousel-inner {
+	margin-bottom: 50px;
+}
+
+.testimonials .carousel-inner .mb-0 {
+	margin-top: 15px;
+	margin-bottom: 6px;
+	font: italic 300 18px/1.6em "Ubuntu", sans-serif;
+}
+
+.testimonials .carousel-inner h5 {
+	margin-top: 0px;
+}
+
+.testimonials .carousel-indicators {
+	margin-bottom: -50px;
+}
+
+.testimonials .carousel-indicators li {
+	width: 11px;
+	height: 11px;
+	margin-right: 2px;
+	margin-left: 2px;
+	border: 1px solid #a0a1a5;
+	background-color: #a0a1a5;
+}
+
+.testimonials .carousel-indicators li.active {
+	width: 11px;
+	height: 11px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	border: 1px solid #ebeaea;
+	background-color: #ebeaea;
+}
+
+
+/************************/
+/*     06. OVERVIEW     */
+/************************/
+.overview {
+	position: relative;
+	padding-top: 60px;
+	background: #1a1b20;
+	text-align: center;
+}
+
+.overview p {
+	margin-bottom: 50px;
+}
+
+.overview img {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+/************************/
+/*     07. DURATION     */
+/************************/
+.duration {
+	padding-top: 60px;
+	padding-bottom: 90px;
+	background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('../images/duration-background.jpg') center no-repeat;
+	background-size: cover;
+}
+
+.duration .duration-pane {
+	position: relative;
+	width: 98%;
+	margin-top: 60px;
+	padding: 18px 22px 20px 20px;
+	border: 1px solid #52555f;
+	background-color: #52555f;
+	border-radius: 6px;
+}
+
+.duration .day-circle {
+	position: absolute;
+	top: -25px;
+	right: -13px;
+	width: 50px;
+	height: 50px;
+	padding-top: 10px;
+	border-radius: 50px;
+	border: 2px solid #00bb5c;
+	background-color: #00bb5c;
+	color: #fff;
+	font: 500 24px/1.2em "Ubuntu", sans-serif;
+	text-align: center;
+}
+
+.duration h3 {
+	margin-top: 0px;
+	
+}
+
+.duration .fa-ul {
+	margin-left: 1.1em;
+	margin-bottom: 0px;
+}
+
+.duration .fa-ul i {
+	top: 0.7em;
+	padding-right: 4px;
+	font-size: 10px;
+}
+
+
+/***********************/
+/*     08. DETAILS     */
+/***********************/
+.details {
+	padding-top: 65px;
+	padding-bottom: 90px;
+	background-color: #24252c;
+}
+
+.details .decorative-line {
+	margin-bottom: 22px;
+}
+
+.details .nav-pills {
+	margin-top: 20px;
+}
+
+.details .nav-pills > li + li {
+	margin-left: 0px;
+}
+
+.details .nav-pills li a {
+	height: 48px;
+	margin-top: 15px;
+	padding: 0px 45px 0px 45px;
+	border: 1px solid #52555f;
+	border-radius: 4px;
+	background-color: #52555f;
+	color: #fff;
+	font: 500 20px/2.3em "Ubuntu", sans-serif;
+	transition: border .3s ease, background-color .3s ease, color .3s ease;
+}
+
+.details .nav-pills li.active a,
+.details .nav-pills li a:hover {
+	border: 1px solid #00bb5c;
+	background-color: #00bb5c;
+	color: #fff;
+}
+
+.details .tab-content {
+	margin-top: 60px;
+}
+
+/* Tab_a */
+.panel-group .panel {
+    border: none;
+    margin-bottom: 20px;
+	background-color: transparent;
+}
+
+.details .panel-default {
+	margin-bottom: 26px;
+	padding-bottom: 26px;
+	border-bottom: 1px solid #52555f;
+}
+
+.panel-group .panel-heading {
+    padding: 0;
+	background-color: transparent;
+}
+
+.panel-group .panel-title a {
+	position: relative;
+	display: block;
+	padding: 0px 0px 0px 0px;
+	border: 1px solid transparent;
+	border-radius: 25px;
+    background-color: transparent;
+    color: #fff;
+    font: 500 22px/1.2em "Ubuntu", sans-serif;
+	transition: all 0.3s ease;
+}
+
+.panel-group .panel-title a.collapsed {
+	border: 1px solid transparent;
+	background-color: transparent;
+    color: #fff;
+}
+.panel-group .panel-title a.collapsed:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.panel-group .panel-title a .circle-numbering {
+	float: left;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	padding-top: 2px;
+	margin-right: 10px;
+	border-radius: 50px;
+	background-color: #00bb5c;
+	text-align: center;
+	transition: background-color 0.3s ease;
+}
+
+.panel-group .panel-title a.collapsed .circle-numbering {
+	background-color: #52555f;
+}
+
+.panel-group .panel-title:hover a.collapsed .circle-numbering {
+	background-color: #00bb5c;
+}
+
+.panel-group .panel-title a .panel-title-text {
+	vertical-align: middle;
+	line-height: 1.4em;
+}
+
+.details .panel-body {
+	padding: 5px 0 0 0;
+	background-color: transparent;
+}
+
+.details .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top: 0px none;
+}
+
+.details .my-swiper-container {
+	overflow: hidden;
+	margin: 50px auto 0px auto;
+}
+
+.details .my-swiper-container .swiper-pagination {
+	margin-bottom: -40px;
+}
+
+.details .my-swiper-container .swiper-pagination .swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	background: #b4b4b4;
+	opacity: 0.5;
+}
+
+.details .my-swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background: #b4b4b4;
+	opacity: 1;
+}
+
+.details .my-swiper-container .swiper-slide {
+	background: #fff;
+	font-size: 18px;
+	line-height: 300px;
+	text-align: center;
+}
+
+.details .my-swiper-container .swiper-button-next {
+	right: 30px;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23f4f4f4'%2F%3E%3C%2Fsvg%3E");
+}
+
+.details .my-swiper-container .swiper-button-prev {
+	left: 30px;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23f4f4f4'%2F%3E%3C%2Fsvg%3E");
+}
+
+/* Tab_b */
+.details .tab-content .tab-b h3 {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.details .tab-content .tab-b .fa-ul {
+	margin-left: 1.6em;	
+	margin-bottom: 20px;
+}
+
+.details .tab-content .tab-b .fa-li {
+	margin-top: 0.16em;
+}
+
+/* Tab_c */
+.details .tab-content .tab-c .features-row {
+	margin-bottom: 20px;
+}
+
+.details .tab-content .tab-c span.fa {
+	float: left;
+	margin-right: 20px;
+	color: #00bb5c;
+}
+
+.details .tab-content .tab-c h4 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.details .tab-content .tab-c img {
+	margin-top: 30px;
+}
+
+
+/***********************/
+/*     09. PRICING     */
+/***********************/
+.pricing {
+	padding-top: 60px;
+	padding-bottom: 90px;
+	background: linear-gradient(rgba(0, 187, 92, 0.0), rgba(0, 187, 92, 0.0)), url('../images/pricing-background.jpg') center no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.pricing .above-price {
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font: 300 20px/1em "Ubuntu", sans-serif;
+	text-decoration: line-through;
+}
+
+.pricing .price {
+	margin-bottom: 15px;
+	font: 500 38px/1.6em "Ubuntu", sans-serif;
+}
+
+.pricing .price .price-value {
+	font: 500 46px/1.2em "Ubuntu", sans-serif;
+}
+
+.pricing .button-solid {
+	border: 1px solid #00bb5c;
+	background-color: #00bb5c;
+}
+
+.pricing .button-solid:hover {
+	border: 1px solid #fff;
+	background-color: transparent;
+}
+
+
+/**************************/
+/*     10. BOTH FACTS     */
+/**************************/
+.facts-1 h3, 
+.facts-2 h3 {
+	margin-bottom: 25px;
+}
+
+.facts-1 .zmdi-hc-ul,
+.facts-2 .zmdi-hc-ul {
+	margin-left: 30px;
+}
+
+.facts-1 .zmdi-hc-ul li,
+.facts-2 .zmdi-hc-ul li {
+	margin-top: 25px;
+}
+
+.facts-1 .zmdi-hc-ul li .zmdi,
+.facts-2 .zmdi-hc-ul li .zmdi {
+	left: -1.9em;
+	margin-top: -2px;
+	font-size: 24px;
+}
+
+.facts-1 .facts-wrapper,
+.facts-2 .facts-wrapper {
+	width: 100%;
+}
+
+
+/***********************/
+/*     11. FACTS 1     */
+/***********************/
+.facts-1 {
+	padding-bottom: 75px;
+	background-color: #00bb5c;
+}
+
+.facts-1 .facts-1-image-pane {
+	height: 350px;
+	margin: auto;
+	background: url('../images/facts-1.jpg') center no-repeat;
+	background-size: cover;
+}
+
+.facts-1 img {
+	margin: 50px auto 35px auto;
+}
+
+.facts-1 .facts-1-text-pane-container {
+	margin-right: 15px;
+	margin-left: 15px;
+	padding-top: 63px;
+	padding-bottom: 0px;
+}
+
+.facts-1 .facts-1-text-pane-container h3 {
+	margin-bottom: 32px;
+}
+
+
+/***********************/
+/*     12. FACTS 2     */
+/***********************/
+.facts-2 {
+	padding-bottom: 75px;
+	background-color: #00bb5c;
+}
+
+.facts-2 hr.under-heading {
+	margin-bottom: 40px;
+}
+
+.facts-2 .facts-2-text-pane-container {
+	margin-right: 15px;
+	margin-left: 15px;
+	padding-top: 63px;
+	padding-bottom: 0px;
+}
+
+.facts-2 .facts-2-text-pane-container h3 {
+	margin-bottom: 32px;
+}
+
+.facts-2 .facts-2-image-pane {
+	height: 350px;
+	margin: auto;
+	background: linear-gradient(rgba(255, 99, 30, 0.0), rgba(255, 99, 30, 0.0)), url('../images/facts-2.jpg') center no-repeat;
+	background-size: cover;
+}
+
+
+/***************************/
+/*     13. INSTRUCTORS     */
+/***************************/
+.instructors {
+	padding-top: 60px;
+	padding-bottom: 45px;
+	background-color: #1a1b20;
+}
+
+.instructors .decorative-line {
+	margin-bottom: 38px;
+}
+
+.instructor-pane {
+	display: inline-block;	
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-bottom: 45px;
+}
+
+.instructor-image {
+	position: relative;
+	max-width: 310px;
+}
+
+.hover-overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	background: rgba(0, 206, 82, 0.8);
+	color: #fff;
+	opacity: 0;
+	text-align: center;
+	transition: opacity .3s ease;
+}
+
+.hover-overlay:hover {	
+	opacity: 1;
+}
+
+.hover-overlay p {
+	margin-right: 40px;
+	margin-left: 40px;
+	font: 300 16px/1.4em "Ubuntu", sans-serif;
+}
+
+.hover-overlay p.read-more {
+	text-decoration: underline;
+}
+
+.instructor-pane a {
+	color: #fff;
+}
+
+.instructor-pane h5 {
+	margin-top: 18px;
+	margin-bottom: 0px;
+}
+
+.instructor-pane p {
+	margin-bottom: 7px;
+}
+
+.instructor-pane .fa-stack.fa {
+	margin-right: 3px;
+	line-height: 2.15;
+}
+
+.instructor-pane .fa-stack-2x {
+	font-size: 2.2em;
+}
+
+.instructor-pane .fa-stack a .fa-stack-1x,
+.instructor-pane .fa-stack a:hover .fa-stack-2x {
+    color: #fff;
+	transition: color .3s ease;
+}
+
+.instructor-pane .fa-stack a:hover .fa-stack-1x,
+.instructor-pane .fa-stack a .fa-stack-2x {
+    color: #00bb5c;
+}
+
+/* Magnific Popup Instructor Details Content */
+.instructor-details-container {
+	position: relative;
+	max-width: 1000px;
+	margin: 40px auto;
+	padding: 25px;
+	background: #24252c;
+	text-align: left;
+}
+
+.instructor-details-container img {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.instructor-details-container h3 {
+	margin-top: 30px;
+}
+
+.instructor-details-container h4 {
+	margin-bottom: 20px;
+}
+
+.instructor-details-container hr {
+	width: 40px;
+	margin-top: 14px;
+	margin-bottom: 12px;
+	margin-left: 0;
+	border: 1px solid #dcdcdc;
+	text-align: left;
+}
+
+.instructor-details-container ul {
+	margin-top: 17px;
+	margin-bottom: 20px;
+	padding-left: 30px;
+}
+
+.instructor-details-container .instructor-quote {
+	margin-top: 20px;
+	padding: 1px 20px 18px 20px;
+	background-color: #52555f;
+}
+
+.instructor-details-container .instructor-quote p {
+	margin-top: 16px;
+	margin-bottom: 8px;
+	font-style: italic;
+}
+
+.instructor-details-container .buttons {
+	text-align: center;
+}
+
+.instructor-details-container .button-outline {
+	margin-top: 25px;
+}
+
+.instructor-details-container .button-solid {
+	margin-top: 15px;
+}
+
+.instructor-details-container button.mfp-close.x-button {
+	position: absolute;
+	top: -5px;
+	right: 13px;
+	width: 10px;
+	height: 10px;
+	color: #fff;
+}
+
+.instructor-details-container a.mfp-close.as-button {
+	position: relative;
+	width: auto;
+	margin-right: 4px;
+	color: #fff;
+	opacity: 1;
+}
+
+
+/**********************************/
+/*     14. FREQUENT QUESTIONS     */
+/**********************************/
+.frequent-questions {
+	padding-top: 63px;
+	padding-bottom: 46px;
+	background-color: #24252c;
+}
+
+.frequent-questions .decorative-line {
+	margin-bottom: 38px;
+}
+
+.frequent-questions .answer {
+	margin-bottom: 40px;
+}
+
+.frequent-questions .question {
+	margin-bottom: 13px;
+}
+
+.frequent-questions .question .frequent-icon,
+.frequent-questions .answer .frequent-icon {
+	float: left;
+	display: inline-block;
+	width: 46px;
+	padding-top: 8px;
+	padding-bottom: 9px;
+	margin-right: 12px;
+	border-radius: 3px;
+	background-color: #44454d;
+	font: 500 20px/1.5em "Ubuntu", sans-serif;
+	text-align: center;
+}
+
+.frequent-questions .answer .frequent-icon {
+	margin-top: 6px;
+}
+
+.frequent-questions .question .frequent-text {
+	margin-top: 7px;
+}
+
+.frequent-questions .frequent-text {
+	display: inline;
+}
+
+
+/**************************/
+/*     15. STATISTICS     */
+/**************************/
+.statistics {
+	padding-top: 30px;
+	padding-bottom: 100px;
+	background-color: #1a1b20;
+}
+
+.statistics .number-container {
+	display: inline-block;
+	min-width: 190px; 
+}
+
+.statistics p {
+	margin-top: 60px;
+	margin-bottom: 0px;
+	color: #fff;
+	font: 300 80px/1em "Ubuntu", sans-serif;	
+}
+
+.statistics .big-numbers-heading {
+	margin-top: 10px;
+	color: #fff; 
+	font: 300 18px/1.4em "Ubuntu", sans-serif;
+}
+
+
+/***************************/
+/*     16. ENDORSEMENT     */
+/***************************/
+.endorsement {
+	padding-top: 80px;
+	padding-bottom: 90px;
+	background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('../images/endorsement-background.jpg') center no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.endorsement p {
+	font: italic 300 18px/1.6em "Ubuntu", sans-serif;
+}
+
+.endorsement h5 {
+	margin-bottom: 20px;
+}
+
+.endorsement .button-solid {
+	border: 1px solid #00bb5c;
+	background-color: #00bb5c;
+}
+
+.endorsement .button-solid:hover {
+	border: 1px solid #fff;
+	background-color: transparent;
+}
+
+
+/**********************/
+/*     17. FOOTER     */
+/**********************/
+.footer {
+	padding-top: 85px;
+	padding-bottom: 73px;
+	background-color: #1a1b20;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.footer h4 {
+	margin-top: 0px;
+	margin-bottom: 11px;
+}
+
+.footer p {
+	font: 300 16px/1.6em "Ubuntu", sans-serif;
+}
+
+.footer .footer-details .fa {
+	margin-right: 3px;
+}
+
+.footer .footer-details .fa.fa-mobile {
+	font-size: 18px;
+}
+
+.footer .footer-details i a {
+	margin-left: 8px;
+	font: 300 16px/1.6em "Ubuntu", sans-serif;
+}
+
+.footer .footer-details p {
+	margin-bottom: 7px;
+}
+
+.footer .footer-details p:last-of-type {
+	margin-bottom: 30px;
+}
+
+.footer .social-icons-container {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 28px;
+}
+
+.footer .social-icons-container .fa-stack a .fa-stack-1x,
+.footer .social-icons-container .fa-stack a:hover .fa-stack-2x {
+    color: #fff;
+	transition: color .3s ease;
+}
+
+.footer .social-icons-container .fa-stack a:hover .fa-stack-1x,
+.footer .social-icons-container .fa-stack a .fa-stack-2x {
+    color: #00bb5c;
+}
+
+.footer form {
+	margin-top: 40px;
+}
+
+.footer .form-control-input {
+	margin-top: 0px;
+	padding-top: 2px;
+	padding-bottom: 3px;
+}
+
+.footer .form-control-textarea {
+	padding-top: 9px;
+}
+
+.footer .form-group.third {
+	margin-bottom: 8px;
+}
+
+
+/*************************/
+/*     18. COPYRIGHT     */
+/*************************/
+.copyright {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #1a1b20;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.copyright span {
+	color: #fff;
+	opacity: 0.5;
+	font: 300 14px/0em "Ubuntu", sans-serif;
+	text-align: center;
+}
+
+.copyright a {
+	margin-top: 0px;
+	opacity: 0.8;
+	font: 300 14px/0em "Ubuntu", sans-serif;
+}
+
+
+/**********************************/
+/*     19. BACK TO TOP BUTTON     */
+/**********************************/
+a.back-to-top {
+	position: fixed;
+	z-index: 999;
+	right: 12px;
+	bottom: 12px;
+	display: none;
+	width: 42px;
+	height: 42px;
+	border-radius: 30px;
+	background: #000 url("../images/up-arrow.png") no-repeat center 47%;
+	background-size: 18px 18px; 
+	text-indent: -9999px;
+}
+
+a:hover.back-to-top {
+	background-color: #00bb5c; 
+}
+
+
+/*****************************/
+/*     20. MEDIA QUERIES     */
+/*****************************/
+
+/* Min-width width 768px */
+@media (min-width: 768px) {
+	
+	/* Style Switcher */
+	#style-switcher .style-switcher-cell {
+		width: 94px;
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+
+	#style-switcher .style-switcher-cell img {
+		width: 94px;
+		height: 82px;
+		margin-top: 0px;
+	}
+
+	h1 {
+		font: 500 78px/1em "Ubuntu", sans-serif;
+	}
+
+	h2 {
+		font: 500 48px/1em "Ubuntu", sans-serif;
+	}
+
+	h3 {
+		font: 500 32px/1.2em "Ubuntu", sans-serif;
+	}
+	
+	.navbar .navbar-brand {
+        padding-left: 30px;
+	}
+	
+	.navbar .navbar-collapse {
+		border-top: 1px solid #6a7591;
+	}
+
+	.header h1 {
+		margin-top: 50px;
+	}
+	
+	.testimonials {
+		padding-bottom: 35px;
+	}
+	
+	.overview {
+		padding-top: 72px;
+	}
+	
+	.duration {
+		padding-top: 70px;
+		padding-bottom: 100px;
+	}
+	
+	.duration .duration-pane {
+		width: 89%;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 24px 32px 25px 33px;
+	}
+
+	.duration .day-circle {
+		top: -35px;
+		right: -35px;
+		width: 70px;
+		height: 70px;
+		padding-top: 16px;
+		font: 500 28px/1.2em "Ubuntu", sans-serif;
+	}
+	
+	.details {
+		padding-top: 70px;
+		padding-bottom: 100px;
+	}
+	
+	.details .nav-pills li {
+		display: inline-block;
+		width: auto;
+	}
+	
+	.details .details-tabs {
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	.details .nav-pills li a {
+		margin-right: 4px;
+		margin-left: 4px;
+	}
+	
+	.details .tab-content .tab-c .features-row {
+		margin-bottom: 10px;
+	}
+
+	.details .tab-content .tab-c span.fa {
+		margin-bottom: 40px;
+	}
+	
+	.panel-group .panel-title a .circle-numbering {
+		width: 50px;
+		height: 50px;
+		margin-right: 16px;
+		padding-top: 11px;
+	}
+	
+	.panel-group .panel-title a .panel-title-text {
+		display: inline-block;
+		margin-top: 9px;
+	}
+	
+	.details .panel-body {
+		margin-top: -8px;
+		padding: 0 0 0 68px;
+	}
+	
+	.pricing {
+		padding-top: 70px;
+		padding-bottom: 100px;
+	}
+	
+	.facts-1 .facts-1-text-pane-container {
+		margin-right: 80px;
+		margin-left: 80px;
+	}
+	
+	.facts-2 .facts-2-text-pane-container {
+		margin-right: 80px;
+		margin-left: 80px;
+	}
+	
+	.instructors {
+		padding-top: 70px;
+		padding-bottom: 55px;
+	}
+	
+	.instructor-image img {
+		width: 310px;
+		height: 302px;
+	}
+	
+	.frequent-questions {
+		padding-top: 73px;
+		padding-bottom: 56px;
+	}
+	
+	.frequent-questions li {
+		margin-bottom: 9px;
+	}
+
+	.frequent-questions .frequent-text {
+		display: block;
+		margin-left: 61px;
+	}
+	
+	.endorsement {
+		padding-top: 90px;
+		padding-bottom: 100px;
+	}
+
+	.checkout-cart .cart-header-row th {
+		padding: 1.2em;
+	}
+
+	.checkout-cart td,
+	.checkout-cart th {
+		padding: 0.5em 1.2em;
+	}
+	
+	.footer {
+		padding-top: 95px;
+		padding-bottom: 20px;
+	}
+	
+	a.back-to-top {
+		right: 20px;
+		bottom: 20px;
+	}
+}
+
+
+/* Min-width width 992px */
+@media (min-width: 992px) {
+	p.seventy-percent-width {
+		width: 70%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.navbar {
+        padding: 20px 25px 20px 15px;
+		border-bottom: none;
+		background-color: transparent;
+		transition: background-color .3s ease-in-out, padding .3s ease-in-out;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+    }
+	
+	.navbar .nav.navbar-nav {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	
+	.navbar.top-nav-collapse {
+       	padding: 0 25px 0 15px;
+		background-color: #1a1b20;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+	
+	.navbar .navbar-collapse {
+		border-top: none;
+	}
+	
+	.navbar .navbar-brand {
+		margin-right: 16px;
+		margin-left: 0px;
+	}
+	
+	.navbar .nav.navbar-nav li a,
+	.navbar .nav.navbar-nav.navbar-right li a	{
+		margin: 11px 10px 16px 10px;
+		padding: 13px 5px 5px 5px;
+		transition: all .2s ease-in-out;
+	}
+	
+	.navbar .nav.navbar-nav li.active a,
+	.navbar .nav.navbar-nav li a:hover	{
+		background-color: transparent;
+		color: #fff;
+		opacity: 1;
+	}
+	
+	/* Navbar in mobile mode on medium displays */
+	.navbar-header {
+		float: left;
+	}
+	
+	.navbar-left, .navbar-right {
+		float: right !important;
+	}
+	
+	.navbar-toggle {
+		display: none;
+	}
+	
+	.navbar-collapse.collapse {
+		display: block !important;
+	}
+	
+	.navbar-nav > li {
+		float: left;
+	}
+	
+	.collapse.in {
+		display: block !important;
+	} 
+	/* end of navbar in mobile mode on medium displays */
+	
+	.header .header-content {
+		padding-top: 100px;
+		padding-bottom: 60px;
+		text-align: left;
+	}
+
+	.header p {
+		text-align: left;
+	}
+
+	.header .countdown {
+		text-align: left;
+	}
+
+	.testimonials {
+		padding-top: 70px;
+	}
+	
+	.testimonials img {
+		margin-top: 0px;
+	}
+	
+	/* Tab_a */
+	.panel-group {
+		width: 98%;
+		margin-bottom: 0px;
+	}
+	
+	.details .my-swiper-container {
+		margin: 0px auto 0px auto;
+	}
+	
+	/* Tab_b */
+	.details .tab-content .tab-b .text-pane {
+		margin-left: 25px;	
+	}
+	
+	.details .tab-content .tab-b h3 {
+		margin-top: 0px;
+	}
+	
+	/* Tab_c */
+	.details .tab-content .tab-c .text-pane {
+		margin-right: 15px;	
+	}
+	
+	.details .tab-content .tab-c img {
+		margin-top: 0px;
+	}
+	
+	.facts-1 {
+		padding-bottom: 0px;
+	}
+	
+	.facts-1 .facts-1-image-pane {
+		float: left;
+		width: 50%;
+		height: 540px;
+	}
+	
+	.facts-1 .facts-1-text-pane {
+		float: right;
+		width: 50%;
+	}
+	
+	.facts-1 .facts-1-text-pane-container {
+		width: 410px;
+		margin-left: 50px;
+		padding-top: 43px;
+	}
+	
+	.facts-2 {
+		padding-bottom: 0px;
+	}
+	
+	.facts-2 .facts-2-text-pane {
+		float: left;
+		width: 50%;
+	}
+
+	.facts-2 .facts-2-text-pane-container {
+		float: right;
+		width: 410px;
+		margin-right: 50px;
+		padding-top: 13px;
+	}
+	
+	.facts-2 .facts-2-image-pane {
+		float: right;
+		width: 50%;
+		height: 540px;
+	}
+	
+	/* Both Facts */
+	.facts-1 .facts-wrapper,
+	.facts-2 .facts-wrapper	{
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	.facts-1 .zmdi-hc-ul,
+	.facts-2 .zmdi-hc-ul	{
+		margin-left: 60px;
+	}
+
+	.facts-1 .zmdi-hc-ul li .zmdi,
+	.facts-2 .zmdi-hc-ul li .zmdi	{
+		left: -1.8em;
+		margin-top: -12px;
+		font-size: 54px;
+	}
+	
+	.instructor-details-container h3 {
+		margin-top: 0px;
+	}
+
+	.instructor-details-container .buttons {
+		text-align: left;
+	}
+
+	.footer form {
+		margin-top: 0px;
+	}
+	
+	.footer .form-control-input {
+		display: inline-block;
+		margin-bottom: 0px;
+	}
+	
+	.footer .form-control-textarea {
+		display: block;
+		height: 130px;
+	}
+	
+	.footer .form-group.first {
+		margin-right: 7px;
+	}
+
+	.footer .form-group.first,
+	.footer .form-group.second {
+		display: inline-block;
+		width: 140px;
+		margin-bottom: 10px;
+	}
+	
+	.footer .form-group.third {
+		margin-bottom: 10px;
+	}
+}
+
+
+/* Min-width width 1200px */
+@media (min-width: 1200px) {
+	.header .header-content-wrapper {
+		width: 92%;
+		margin-right: auto;
+		margin-left: auto; 
+	}
+
+	.header h1 {
+		margin-top: 70px;
+	}
+	
+	.details {
+		padding-bottom: 90px;
+	}
+
+	/* Tab_a */
+	.details .my-swiper-container {
+		margin: 0px 0px 0px 15px;
+	}
+	
+	.details .my-swiper-container .swiper-slide img {
+		max-width: 540px; /* to prevent display problems in IE 11 */
+	}
+	
+	.details .my-swiper-container .swiper-button-next {
+		top: 50%
+	}
+	
+	.details .my-swiper-container .swiper-button-prev {
+		top: 50%;
+		margin-left: 15px;
+	}
+	
+	/* Tab_b */
+	.details .tab-content .tab-b h3 {
+		margin-top: 35px;
+	}
+	
+	/* Tab_c */
+	.details .tab-content .tab-c .text-pane {
+		margin-top: 50px;	
+	}
+	
+	.facts-1 .facts-1-text-pane-container {
+		width: 500px;
+		margin-left: 65px;
+		padding-top: 73px;
+	}
+	
+	.facts-2 .facts-2-text-pane-container {
+		width: 500px;
+		margin-right: 70px;
+		padding-top: 73px;
+	}
+
+	.statistics p {
+		font: 300 100px/1em "Ubuntu", sans-serif;	
+	}
+	
+	.statistics .number-container {
+		margin-right: 35px;
+		margin-left: 35px;
+	}
+	
+	.footer .form-control-textarea {
+		height: 100px;
+	}
+	
+	.footer form .form-group.first,
+	.footer form .form-group.second {
+		width: 174px;
+	}
+}

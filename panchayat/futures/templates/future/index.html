@@ -1,441 +1,434 @@
 {% load static %}
-﻿<!DOCTYPE html>
-<html>
-	
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Village Panchayat</title>
-        <link rel="shortcut icon" href="{% static 'images/favicon.png'">
-
-		<!-- GOOGLE FONTS : begin -->
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-		<!-- GOOGLE FONTS : end -->
-
-       <link rel="stylesheet" type="text/css" href="{% static 'library/css/style.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static 'library/css/skin/red.css' %}">
-		<!-- <link rel="stylesheet" type="text/css" href="{% static 'library/css/custom.css' %}"> -->
-		
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
+	<title>Agro</title>
+	<!-- Styles -->
+	<link href="{% static 'future/css/bootstrap.css' %}" rel="stylesheet">
+	<link href="{% static 'future/css/font-awesome.css' %}" rel="stylesheet">
+	<link href="{% static 'future/css/material-design-iconic-font.css' %}" rel="stylesheet">
+	<link href="{% static 'future/css/swiper.css' %}" rel="stylesheet">
+	<link href="{% static 'future/css/styles.css' %}" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <!-- <link rel="icon" href="images/favicon.png"> -->
+	
+	
+	
+</head>
+<body data-spy="scroll" data-target=".navbar-fixed-top">
+	
+	
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+			<div class="row">
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand page-scroll" href="#"><h2>AGRO</h2></a>
+				</div>
 
-	</head>
-	<body>
-
-		<header id="header" class="m-has-header-tools m-has-gmap">
-			<div class="header-inner">
-
-				<div class="header-content">
-					<div class="c-container">
-						<h1 style="color: white;">Village Panchayat</h1>
-						<div class="header-content-inner">
-
-							<div class="header-branding m-large-logo">
-								<br><br><br><br><br><br><br>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="navbar-collapse collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a class="page-scroll" href="#header">HOME</a></li>
+						<li><a class="page-scroll" href="#overview">OVERVIEW</a></li>
+						<li><a class="page-scroll" href="#pricing">PRICING</a></li>
+						<li><a class="page-scroll" href="#facts">FACTS</a></li>
+						<li><a class="page-scroll" href="#frequent-questions">FAQ</a></li>
+						<li><a class="page-scroll" href="#footer">CONTACT</a></li>
+					</ul>
+				</div>
+				
+			</div>
+        </div>
+    </div> <!-- end of navigation -->
+	
+	
+	<!-- HEADER -->
+	<header id="header" class="header">
+		<div class="flex-container-wrapper"> 
+			<div class="header-content">
+				<div class="container">
+					<div class="row">
+						<div class="header-content-wrapper">
+							<div class="col-md-6">
+								<h1>Sell or Buy Orders</h1>
+								<p>Learn how to master online selling in 4 weeks of intensive online training. Limited registration time!</p>
+								
 							</div>
-							
-						
+							<div class="col-md-6">
+								<form id="RegistrationForm" data-toggle="validator">
+									<p><strong>First Name *</strong></p>
+									<div class="form-group">
+										<input type="text" class="form-control-input" id="firstname" placeholder="First Name" required>
+										<div class="help-block with-errors"></div>
+									</div>
 
+									<p><strong>Last Name *</strong></p>
+									<div class="form-group">
+										<input type="text" class="form-control-input" id="lastname" placeholder="Last Name" required>
+										<div class="help-block with-errors"></div>
+									</div>
+
+									<p><strong>Phone Number *</strong></p>
+									<div class="form-group">
+										<input type="text" class="form-control-input" id="phone" placeholder="Phone Number" required>
+										<div class="help-block with-errors"></div>
+									</div>
+									
+									<p><strong>Email Address *</strong></p>
+									<div class="form-group">
+										<input type="email" class="form-control-input" id="email" placeholder="Email" required>
+										<div class="help-block with-errors"></div>
+									</div>
+
+									<div class="form-group">
+										<input type="checkbox" id="#" value="Agreed-to-Terms" required> Agree to our <a class="show-terms popup-with-move-anim" href="#">terms and conditions</a>
+										<div class="help-block with-errors"></div>
+									</div>
+
+									<button type="submit" class="form-control-submit-button">REGISTER NOW</button>
+									<div class="form-message">
+										<div id="msgSubmit" class="h3 text-center hidden"></div>
+									</div>
+								</form>
+							</div> 
+						</div> 
+					</div> 
+				</div> 
+			</div> 
+		</div> 
+	</header> 
+	
+	
+	<!-- TESTIMONIALS -->
+	<div class="testimonials">
+		<div class="container">
+			<div class="row">
+				<div id="quote" class="carousel slide" data-ride="carousel" data-interval="6000">
+					<ol class="carousel-indicators">
+						<li data-target="#quote" data-slide-to="0" class="active"></li>
+						<li data-target="#quote" data-slide-to="1"></li>
+						<li data-target="#quote" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<div class="col-md-4">
+								<img class="img-circle" src="{% static 'future/images/customer-testimonial-1.jpg'%}" alt="customer testimonial">
+								<p class="mb-0">"The most convenient way to learn how to sell online at an affordable price. I am glad I found Agro and I recommend it."</p>
+								<h5>Mary Fitzgerald</h5>
+							</div>
+							<div class="col-md-4">
+								<img class="img-circle" src="{% static 'future/images/customer-testimonial-2.jpg'%}" alt="customer testimonial">
+								<p class="mb-0">"I was looking for an online resource to start learning how to sell online and I am very happy I found Argo Course."</p>
+								<h5>John Frown</h5>
+							</div>
+							<div class="col-md-4">
+								<img class="img-circle" src="{% static 'future/images/customer-testimonial-3.jpg'%}" alt="customer testimonial">
+								<p class="mb-0">"My background has absolutely no connection with online selling but I managed to reach my goals in 2 months with Argo."</p>
+								<h5>Mike Town</h5>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-md-4">
+								<img class="img-circle" src="{% static 'future/images/customer-testimonial-1.jpg'%}" alt="customer testimonial">
+								<p class="mb-0">"My boss pushed me to take this training course about selling online and now I am grateful he did. My skills are updated"</p>
+								<h5>Judy Smithfield</h5>
+							</div>
+							<div class="col-md-4">
+								<img class="img-circle" src="{% static 'future/images/customer-testimonial-2.jpg' %}" alt="customer testimonial">
+								<p class="mb-0">"Online selling is all about analysis, planning and action. I've learned this in Argo Training Course and it didn't fail me."</p>
+								<h5>Ruben May</h5>
+							</div>
+							<div class="col-md-4">
+								<img class="img-circle" src="{% static 'future/images/customer-testimonial-3.jpg' %}" alt="customer testimonial">
+								<p class="mb-0">"All those years spent losing a ton of potential customers, it almost scares me. Now I'm on top of the game and my team too."</p>
+								<h5>Sully McLane</h5>
+							</div>
+						</div>
+						<div class="item">
+							<div class="col-md-4">
+								<img class="img-circle" src="{% static 'future/images/customer-testimonial-1.jpg' %}" alt="customer testimonial">
+								<p class="mb-0">"In a few words Argo Training Course is probably the best experience I ever had. Teachers are great and the community."</p>
+								<h5>Ron Blake</h5>
+							</div>
+							<div class="col-md-4">
+								<img class="img-circle" src="{% static 'future/images/customer-testimonial-2.jpg' %}" alt="customer testimonial">
+								<p class="mb-0">"My only gripe with Argo Training Course is not finding it sooner. Now that I did I am very happy to lear about selling."</p>
+								<h5>Paula Jerry</h5>
+							</div>
+							<div class="col-md-4">
+								<img class="img-circle" src="{% static 'future/images/customer-testimonial-3.jpg' %}" alt="customer testimonial">
+								<p class="mb-0">"Best value compared to the price. You will not find another training course about online selling as good as this one."</p>
+								<h5>Simone Finley</h5>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div> 
+		</div> 
+	</div> 
+	
+	
+	<!-- OVERVIEW -->
+	<div id="overview" class="overview">
+		<div class="container">
+			<h2>Overview</h2>
+			<img class="decorative-line" src="{% static 'future/images/decorative-line.svg' %}" alt="decorative line">
+			<p class="seventy-percent-width">Learn in <strong>just 3 days</strong> how to improve your online selling techniques by attending Argo's online selling training course. Our instructors are prepared to answer any questions about sales and marketing.</p>
+			<img class="img-responsive" src="{% static 'future/images/overview-dashboard.png' %}" alt="dashboard">
+		</div>
+	</div> 
+	
+	
+	<!-- DURATION -->
+	<div class="duration">
+		<div class="container">
+			<h2 class="text-center">Duration</h2>
+			<img class="decorative-line" src="{% static 'future/images/decorative-line.svg' %}" alt="decorative line">
+			<p class="seventy-percent-width">Argo's training course will take you through 3 major stages of the online selling process and will help you design your own strategy. Find below this section the <a class="page-scroll" href="#">details for each day</a></p>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="duration-pane">
+						<div class="day-circle">1</div>
+						<h3>Market Analysis</h3>
+						<p>We'll start the training course by making a thorough analysis of our business environment</p>
+						<ul class="fa-ul">
+							<li><i class="fa-li fa fa-square"></i>Instructor: <strong>Pauline Smith</strong></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="duration-pane">
+						<div class="day-circle">2</div>
+						<h3>Sales Planning</h3>
+						<p>After collecting the right market input we can dive into creating efficient sales strategies</p>
+						<ul class="fa-ul">
+							<li><i class="fa-li fa fa-square"></i>Instructor: <strong>Mike Brown</strong></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="duration-pane">
+						<div class="day-circle">3</div>
+						<h3>Evaluation Time</h3>
+						<p>Campaigns need to be evaluated in order to understand the results and prepare for the future</p>
+						<ul class="fa-ul">
+							<li><i class="fa-li fa fa-square"></i>Instructor: <strong>Ronnie Blake</strong></li>
+						</ul>
+					</div>
+				</div>
+			</div> 
+		</div> 
+	</div> 
+	
+	
+	
+	<div id="pricing" class="pricing">
+		<div class="container">
+			<h2>Pricing</h2>
+			<img class="decorative-line" src="{% static 'future/images/decorative-line.svg" alt="decorative line' %}">
+			<p class="seventy-percent-width">When you register you get access to the entire 3 days course which will enable you to understand your business environment, devise a realistic development strategy and how to effectively act on it. Of course we'll also teach you how to evaluate your actions and take the right decisions.</p>
+			<p class="above-price">₹199 Regular</p>
+			<p class="price"><span class="price-value">₹99</span> Limited Offer</p>
+			<a class="button-solid page-scroll" href="#header">REGISTER NOW</a>
+		</div>
+	</div> 
+	
+	
+	<!-- FACTS 1 -->
+	<div id="facts" class="facts-1 clearfix">
+		<div class="facts-1-image-pane">
+		</div>
+		
+		<div class="facts-1-text-pane">
+			<div class="facts-1-text-pane-container">
+				<div class="facts-wrapper">
+					<h3>Argo's Training Will...</h3>
+					<ul class="zmdi-hc-ul">
+						<li><i class="zmdi-hc-li zmdi zmdi-check zmdi-hc-3x"></i>Teach you how to analyze and understand your business environment for better decision making</li>
+						<li><i class="zmdi-hc-li zmdi zmdi-check zmdi-hc-3x"></i>Help you find hidden value in your courses and services and launch them succesfully</li>
+						<li><i class="zmdi-hc-li zmdi zmdi-check zmdi-hc-3x"></i>Provide you with the best tactical ideas to act on your marketing strategy</li>
+						<li><i class="zmdi-hc-li zmdi zmdi-check zmdi-hc-3x"></i>Highly increase your confidence level to undertake bolder projects in your industry</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div> 
+	
+	
+	<!-- FACTS 2 -->
+	<div class="facts-2 clearfix">
+		<div class="facts-2-image-pane">
+		</div>
+
+		<div class="facts-2-text-pane">
+			<div class="facts-2-text-pane-container clearfix">
+				<div class="facts-wrapper">
+					<h3>Agro's Training Will Not...</h3>
+					<ul class="zmdi-hc-ul">
+						<li><i class="zmdi-hc-li zmdi zmdi-close zmdi-hc-3x"></i>Waste 3 days of your life for nothing because the course is packed with highly valuable data</li>
+						<li><i class="zmdi-hc-li zmdi zmdi-close zmdi-hc-3x"></i>Provide you with untested methods and techniques because everything we teach is from real-life</li>
+						<li><i class="zmdi-hc-li zmdi zmdi-close zmdi-hc-3x"></i>Make you spend 199 dollars without improving your skills ten times more than you would imagine</li>
+						<li><i class="zmdi-hc-li zmdi zmdi-close zmdi-hc-3x"></i>Leave you stranded at the end of the course beacuse it will guide you towards reaching your goals</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div> <!-- end of facts-2 -->
+	
+	
+	
+	<!-- FREQUENT QUESTIONS -->
+	<div id="frequent-questions" class="frequent-questions">
+		<div class="container">
+			<h2 class="text-center">Questions</h2>
+			<img class="decorative-line" src="{% static 'future/images/decorative-line.svg' %}" alt="decorative line">
+			<div class="row">
+				<div class="col-md-6">
+					<ul class="frequent-ul list-unstyled">
+						<li class="question clearfix"><span class="frequent-icon">Q</span> <h4 class="frequent-text">What happens after I register ?</h4></li>
+						<li class="answer clearfix"><span class="frequent-icon">A</span> <span class="frequent-text">Upon registration you will receive a link on your email address which redirects you to our online training course platform. There you will confirm your credentials.</span></li>
+						<li class="question clearfix"><span class="frequent-icon">Q</span> <h4 class="frequent-text">Is the course guaranteed, can I ask for refunds ?</h4></li>
+						<li class="answer clearfix"><span class="frequent-icon">A</span> <span class="frequent-text">Of course, the course is 100% guaranteed which means you can ask for a refund anytime and receive the full reimbursement of your money. So your investment is risk free.</span></li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<ul class="frequent-ul list-unstyled">
+						<li class="question clearfix"><span class="frequent-icon">Q</span> <h4 class="frequent-text">Are you sure the content is genuine ?</h4></li>
+						<li class="answer clearfix"><span class="frequent-icon">A</span> <span class="frequent-text">This training course stands on its own with original content based on real life case studies conducted by our instructors. We haven't used other online resources free or paid.</span></li>
+						<li class="question clearfix"><span class="frequent-icon">Q</span> <h4 class="frequent-text">Where do I go upon finishing the course ?</h4></li>
+						<li class="answer clearfix"><span class="frequent-icon">A</span> <span class="frequent-text">Last chapter of the online training is reserved for pointing you towards the right direction after completing all the materials in the course. So you know what to do next.</span></li>
+					</ul>
+				</div>
+			</div> 
+		</div> 
+	</div> 
+
+	
+	<!-- ENDORSEMENT -->
+	<div class="endorsement">
+		<div class="container">
+			<div class="endorsement-wrapper">
+				<p class="seventy-percent-width">Argo's online sales training course is highly recommended to anyone intrested in developing their online sales skills, either for courses or services. I've taken this course last year and now I run my own business.</p>
+				<h5>Larry Volgen - StartUp Founder</h5>
+				<a class="button-solid page-scroll" href="#header">REGISTER NOW</a>
+			</div>
+		</div> <!-- end of container -->
+	</div> <!-- end of endorsement -->
+	
+	
+	<!-- FOOTER -->
+	<div id="footer" class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="footer-pane">
+						<h4>Contact Details</h4>
+						<div class="footer-details">
+							<p>Agro is an online training course that will teach you how to sell online</p>
+							<p><i class="fa fa-map-marker" aria-hidden="true"></i> Sricity Area, 517646, Sricity, INDIA</p>
+							<p><i class="fa fa-phone" aria-hidden="true"><a class="phone-number" href="tel:003024630820">+30 2463 0820</a></i>&nbsp;&nbsp;<i class="fa fa-mobile" aria-hidden="true"><a class="phone-number" href="tel:003071630231">+30 7163 0231</a></i>
+							<i class="fa fa-envelope-o" aria-hidden="true"><a href="#">contact@agro.com</a></i>&nbsp;&nbsp;<i class="fa fa-chrome" aria-hidden="true"><a href="#">www.agro.com</a></i></p>
 						</div>
 					</div>
 				</div>
 				
-
-			</div>
-		</header>
-		
-		<div class="header-bg">
-
-			<div class="header-image" data-autoplay="8">
-				<div class="image-layer" style="background-image: url( '{% static "images/header-01.jpg" %}' );"></div>
-			</div>
-			
-
-		</div>
+				<div class="col-md-4">
+					<div class="footer-pane">
+						<h4>Social Networks</h4>
+						<!-- Social Icons Container -->
+						<div class="social-icons-container">
+							<span class="fa-stack fa-lg">
+								<a href="#your-link-here">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+								</a>
+							</span>
+							<span class="fa-stack fa-lg">
+								<a href="#your-link-here">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+								</a>
+							</span>
+							<span class="fa-stack fa-lg">
+								<a href="#your-link-here">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+								</a>
+							</span>
+							<span class="fa-stack fa-lg">
+								<a href="#your-link-here">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+								</a>
+							</span>
+							<span class="fa-stack fa-lg">
+								<a href="#your-link-here">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+								</a>
+							</span>
+							<span class="fa-stack fa-lg">
+								<a href="#your-link-here">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+								</a>
+							</span>
+						</div> <!-- end of social icons container -->
+						<h4>Official Partners</h4>
+						<p>Delivery Services: <a>www.fastcompany.com</a> <br> Music Media Streaming: <a>www.musicstream.com</a></p>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="footer-pane">
+						<!-- Contact Form -->
+						<form id="ContactForm" data-toggle="validator">
+							<div class="form-group first">
+								<input type="text" class="form-control-input" id="cname" placeholder="Name" required>
+							</div>
+							<div class="form-group second">
+								<input type="email" class="form-control-input" id="cemail" placeholder="Email" required>
+							</div>
+							<div class="form-group third">
+								<textarea class="form-control-textarea" id="cmessage" placeholder="Write your message here" rows="4" required></textarea>
+							</div>
+							<button type="submit" class="form-control-submit-button">SUBMIT</button>
+							<div class="form-message">
+								<div id="cmsgSubmit" class="h3 text-center hidden"></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div> <!-- end of row -->
+		</div> <!-- end of container -->
+	</div> <!-- end of footer -->
 	
-		<div id="core">
-			<div class="c-container">
-				<div class="row">
-
-					
-					<div class="middle-column col-md-6 col-md-push-3">
-
-						<div id="page-header">
-
-							
-							<div class="page-title">
-								<h1>Make a New Order</em></h1>
-							</div>
-						
-
-						</div>
-						<div id="page-content">
-							<div class="page-content-inner">
-
-								<div class="c-directory m-has-icon m-3-columns">
-									<div class="c-content-box">
-										<form method="POST" action="">
-											<br>
-											{% csrf_token %}
-											{{form.as_p}}
-											<button  type="submit">Check In</button>
-										</form>          
-									</div>
-								</div>
-								<!-- DIRECTORY : end -->
-
-								<!-- POST LIST : begin -->
-									<!-- POST LIST : end -->
-
-							</div>
-						</div>
-						<hr class="c-separator m-margin-top-small m-margin-bottom-small m-transparent hidden-lg hidden-md">
-
-					</div>
-					<div class="left-column col-md-3 col-md-pull-6">
-
-						
-						<nav class="side-menu m-left-side m-show-submenu">
-							<ul>
-								<li><a href="#">Home</a>
-								
-								</li>
-								<li><a href="#">Government</a>
-									<ul>
-										<li><a href="#">Town Hall</a></li>
-										<li><a href="#">Town Council</a></li>
-										<li><a href="#">Phone Numbers</a></li>
-										<li><a href="#">Documents</a></li>
-										<li><a href="#">Write To Mayor</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Community</a>
-									<ul>
-										<li><a href="#">News</a></li>
-										<li><a href="#">Notices</a></li>
-										<li><a href="#">Events</a></li>
-										<li><a href="#">Galleries</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Pages</a>
-									<ul>
-										<li><a href="#">Statistics</a></li>
-										<li><a href="#">Virtual Tour</a></li>
-										<li><a href="#">Town History</a></li>
-										<li><a href="#">Elements</a></li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-						<aside class="sidebar">
-							<div class="widget-list">
-
-									<div class="widget documents-widget">
-									<div class="widget-inner">
-										<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-papers"></i>Documents</h3>
-										<div class="widget-content">
-											<ul class="document-list m-has-icons">
-
-												<li class="document">
-													<div class="document-inner">
-														<div class="document-icon" title="PDF File"><i class="fa fa-file-pdf-o"></i></div>
-														<h4 class="document-title">
-															<a href="#" target="_blank">Council Agenda April 24, 2019</a>
-															<span class="document-filesize">(27 kB)</span>
-														</h4>
-													</div>
-												</li>
-												<li class="document">
-													<div class="document-inner">
-														<div class="document-icon" title="PDF File"><i class="fa fa-file-pdf-o"></i></div>
-														<h4 class="document-title">
-															<a href="#" target="_blank">Village Report 2019</a>
-															<span class="document-filesize">(24 kB)</span>
-														</h4>
-													</div>
-												</li>
-												<li class="document">
-													<div class="document-inner">
-														<div class="document-icon" title="Word Document"><i class="fa fa-file-word-o"></i></div>
-														<h4 class="document-title">
-															<a href="#" target="_blank">Police Contract</a>
-															<span class="document-filesize">(27 kB)</span>
-														</h4>
-													</div>
-												</li>
-												<li class="document">
-													<div class="document-inner">
-														<div class="document-icon" title="Word Document"><i class="fa fa-file-word-o"></i></div>
-														<h4 class="document-title">
-															<a href="#" target="_blank">Public Schools Contract</a>
-															<span class="document-filesize">(27 kB)</span>
-														</h4>
-													</div>
-												</li>
-
-											</ul>
-											<p class="show-all-btn"><a href="#">See All Documents</a></p>
-										</div>
-									</div>
-								</div>
-								<div class="widget locale-info-widget m-has-bg">
-									<div class="widget-inner">
-										<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-map-marker"></i>Locale Info</h3>
-										<div class="widget-content">
-											<ul>
-												<li>
-													<div class="row-title"><h4>Country</h4></div>
-													<div class="row-value">India</div>
-												</li>
-												<li>
-													<div class="row-title"><h4>State</h4></div>
-													<div class="row-value">Andhra Pradesh</div>
-												</li>
-												
-												<li>
-													<div class="row-title"><h4>Sricity Area</h4></div>
-													<div class="row-value">72.7 sq mi (188.4 km<sup>2</sup>)</div>
-												</li>
-												<li>
-													<div class="row-title"><h4>Population</h4></div>
-													<div class="row-value">4,314</div>
-												</li>
-												<li>
-													<div class="row-title"><h4>Coordinates</h4></div>
-													<div class="row-value">44°28′31″N<br>72°42′8″W</div>
-												</li>
-												<li>
-													<div class="row-title"><h4>Time zone</h4></div>
-													<div class="row-value">South East</div>
-												</li>
-												<li>
-													<div class="row-title"><h4>ZIP code</h4></div>
-													<div class="row-value">517646</div>
-												</li>
-											</ul>
-            							</div>
-									</div>
-								</div>
-									<div class="widget featured-gallery-widget">
-									<div class="widget-inner">
-										<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-pictures"></i>Featured Gallery</h3>
-										<div class="widget-content">
-											<div class="gallery-image" title="Streets of VillagePress">
-												<a href="#"><img src=" {% static 'images/featured-gallery-01.jpg' %}" alt=""></a>
-											</div>
-											<p class="show-all-btn"><a href="#">See All Galleries</a></p>
-            							</div>
-									</div>
-								</div>
-							</div>
-						</aside>
-
-					</div>
-					<div class="right-column col-md-3">
-						<aside class="sidebar">
-							<div class="widget-list">
-
-								<div class="widget notices-widget">
-									<div class="widget-inner">
-										<h3 class="widget-title m-has-ico"><i class="#"></i>Village Notices</h3>
-										<div class="widget-content">
-											<ul class="notice-list">
-
-												<li class="notice">
-													<div class="notice-inner">
-														<h4 class="notice-title"><a href="#">Annual Marathon Registration</a></h4>
-														<span class="notice-date">May 14, 2019</span>
-													</div>
-												</li>
-													<li class="notice">
-													<div class="notice-inner">
-														<h4 class="notice-title"><a href="#">Traf fic Safety Notice</a></h4>
-														<span class="notice-date">July 19, 2019</span>
-													</div>
-												</li>
-													<li class="notice">
-													<div class="notice-inner">
-														<h4 class="notice-title"><a href="#">Municipal Panchayat Waste</a></h4>
-														<span class="notice-date">August 24, 2019</span>
-													</div>
-												</li>
-													<li class="notice">
-													<div class="notice-inner">
-														<h4 class="notice-title"><a href="#">Upcoming Public Meetings</a></h4>
-														<span class="notice-date">October 18, 2020</span>
-													</div>
-												</li>
-
-											</ul>
-											<p class="show-all-btn"><a href="#">See All Notices</a></p>
-										</div>
-									</div>
-								</div>
-									<div class="widget image-widget">
-									<div class="widget-inner">
-										<div class="widget-content">
-											<a href="#"><img src="{% static 'images/poster-01.jpg' %}" alt=""></a>
-										</div>
-									</div>
-								</div>
-								<div class="widget events-widget">
-									<div class="widget-inner">
-										<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-calendar-full"></i>Upcoming Events</h3>
-										<div class="widget-content">
-											<ul class="event-list">
-
-												<li class="event m-has-date">
-													<div class="event-inner">
-														<div class="event-date" title="June 3, 2016">
-															<span class="event-month">Jun</span>
-															<span class="event-day">3</span>
-														</div>
-														<h4 class="event-title"><a href="#">Movie Premiere: Reflex Revenge (Action Drama)</a></h4>
-													</div>
-												</li>
-												<li class="event m-has-date">
-													<div class="event-inner">
-														<div class="event-date" title="June 24, 2016">
-															<span class="event-month">Jun</span>
-															<span class="event-day">24</span>
-														</div>
-														<h4 class="event-title"><a href="#">Summer Rock Festival: Intrepid Pioneers, Filament Kingdom, Messenger Encounter &amp; More!</a></h4>
-													</div>
-												</li>
-												<li class="event m-has-date">
-													<div class="event-inner">
-														<div class="event-date" title="July 9, 2016">
-															<span class="event-month">Jul</span>
-															<span class="event-day">9</span>
-														</div>
-														<h4 class="event-title"><a href="#">Theatre Premiere: Antigone with Maximiliano Simonas</a></h4>
-													</div>
-												</li>
-											<li class="event m-has-date">
-													<div class="event-inner">
-														<div class="event-date" title="July 15, 2016">
-															<span class="event-month">Jul</span>
-															<span class="event-day">15</span>
-														</div>
-														<h4 class="event-title"><a href="#">Annual Spring Marathon: Around the TownPress</a></h4>
-													</div>
-												</li>
-											</ul>
-											<p class="show-all-btn"><a href="#">See All Events</a></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</aside>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<footer id="footer" class="m-has-bg">
-			<div class="footer-bg">
-				<div class="footer-inner">
-
-					<div class="footer-top">
-						<div class="c-container">
-
-							<div id="bottom-panel">
-								<div class="bottom-panel-inner">
-									<div class="row">
-										<div class="col-md-3">
-
-											
-											<div class="widget">
-												<hr class="c-separator m-transparent hidden-lg hidden-md">
-												<div class="widget-inner">
-													<h3 class="widget-title">About Village Panchayat</h3>
-													<div class="widget-content">
-														<p>Panchayat is best suited to be used as a presentation site for small towns or villages.</p>
-														
-													</div>
-												</div>
-											</div>
-										
-
-										</div>
-										<div class="widget-col col-md-3">
-
-											
-											<div class="widget definition-list-widget">
-												<hr class="c-separator m-transparent hidden-lg hidden-md">
-												<div class="widget-inner">
-													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-telephone"></i>Phone Numbers</h3>
-													<div class="widget-content">
-														<dl>
-															<dt>Panchayat Clerk</dt>
-															<dd>(123) 456-7890</dd>
-															<dt>State Police</dt>
-															<dd>(123) 456-7891</dd>
-															<dt>Fire Department</dt>
-															<dd>(123) 456-7892</dd>
-														</dl>
-														<p class="show-all-btn"><a href="#">See All Phone Numbers</a></p>
-													</div>
-												</div>
-											</div>
-											
-
-										</div>
-										<div class="widget-col col-md-3">
-
-											<div class="widget mailchimp-subscribe-widget">
-												<hr class="c-separator m-transparent hidden-lg hidden-md">
-												<div class="widget-inner">
-													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-at-sign"></i>Join Our Newsletter</h3>
-													<div class="widget-content">
-
-                										
-
-	                    										<div class="description">
-	                    											<p>Join our newsletter to receive up to date news about our villages.</p>
-																</div>																
-										                        <div class="form-fields">
-										                            <input type="text" placeholder="Your Email Address" name="EMAIL" class="m-required m-email">
-										                            
-										                        </div>
-
-	                    									
-
-    												</div>
-												</div>
-											</div>
-
-										</div>
-										<div class="widget-col col-md-3">
-
-											<div class="widget">
-												<hr class="c-separator m-transparent hidden-lg hidden-md">
-												<div class="widget-inner">
-													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-envelope"></i>Panchayat Hall Address</h3>
-													<div class="widget-content">
-														<p>P.O. Box 123 TownPress<br>VT 12345</p>
-														<p>Phone: (123) 456-7890<br>Fax: (123) 456-7891<br>
-														Email: <a href="#">panchayathall@panchayatpress.gov</a></p>
-													</div>
-												</div>
-											</div>
-											
-
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		
-<!-- 	<script src="{% static 'library/js/jquery-1.9.1.min.js' %}" type="text/javascript"></script>
-		<script src="{% static 'library/js/third-party.js' %}" type="text/javascript"></script>
-		<script src="{% static 'library/js/library.js' %}" type="text/javascript"></script>
-		<script src="{% static 'library/js/scripts.js' %}" type="text/javascript"></script> -->
-
-	</body>
+	
+	<!-- COPYRIGHT -->
+	<div class="copyright">
+		<div class="container text-center">
+			<span>Copyright © Agro</span> <a class="inverse" >2019</a>
+		</div> 
+	</div> 
+			
+	
+	<!-- SCRIPTS -->
+	<script src="{% static 'future/js/jquery-2.2.4.min.js' %}" type="text/javascript"></script> <!-- jQuery v2.2.4 - necessary for Bootstrap's JavaScript plugins -->
+	<script src="{% static 'future/js/bootstrap.min.js' %}" type="text/javascript"></script> <!-- Bootstrap v3.3.7 -->
+	<script src="{% static 'future/js/swiper.min.js' %}" type="text/javascript"></script> <!-- Swiper v3.4.2 for image gallery swiper -->
+	<script src="{% static 'future/js/scripts.js' %}" type="text/javascript"></script> 
+	
+</body>
 </html>
