@@ -27,31 +27,40 @@ def new_market_order(request):
             ProductionMode=form.cleaned_data.get("ProductionMode")
             BasePrice=form.cleaned_data.get("BasePrice")
 
-        print(CropName, CropVariety, Quantity, ClosingDate, ProductionMode, BasePrice )
+        print(CropName, CropVariety, Quantity, str(ClosingDate), ProductionMode, BasePrice )
+        # closing=str(ClosingDate)
+        # print(type(closing))
+        # print(closing)
+        year = ClosingDate.strftime("%Y")
+        print("year:", year)
+        month = ClosingDate.strftime("%m")
+        print("month:", month)
+        day = ClosingDate.strftime("%d")
+        print("day:", day)
+        data={
+            # print(closing, type(closing))
+               "CropName": CropName,
+                "CropVariety": CropVariety,
+                "Quantity": Quantity,
+                "ProductionMode":ProductionMode,
+                "BasePrice": BasePrice,
+                "ClosingDate":str(ClosingDate)
+            }
+        
+        print(data)
+        data=json.dumps(data)
+        headers = {
+                        "Content-Type": "application/json",
+                        "accept": "application/json",
+                       'Authorization': 'JWT '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InJhamEiLCJleHAiOjE1NzQ0NTU4MTksImVtYWlsIjoic2hpdmFtZ3VwdGFoZHI5OEBnbWFpbC5jb20ifQ.bpScWzggOlvnNUMa4nM1aV2ikk72X_3L3eT_mRRdy10', 
+    #   Authorization: `JWT ${localStorage.getItem('token')}`,
+    }
 
-    #     data={
-    #         {
-    #             "CropName": CropName,
-    #             "CropVariety": CropVariety,
-    #             "Quantity": Quantity,
-    #             "ProductionMode":ProductionMode,
-    #             "BasePrice": BasePrice,
-    #             "ClosingDate":json.dumps(ClosingDate)
-    #         }
-    #     }
-    #     data=json.dumps(data)
-    #     headers = {
-    #                     "Content-Type": "application/json",
-    #                     "accept": "application/json",
-    #                    'Authorization': 'JWT '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InJhamEiLCJleHAiOjE1NzQ0NTU4MTksImVtYWlsIjoic2hpdmFtZ3VwdGFoZHI5OEBnbWFpbC5jb20ifQ.bpScWzggOlvnNUMa4nM1aV2ikk72X_3L3eT_mRRdy10', 
-    # #   Authorization: `JWT ${localStorage.getItem('token')}`,
-    # }
-
-    #     print('***',data)
-    #     API_ENDPOINT='http://localhost:8000/order/marketorder/'
-    #     r = requests.post(url = API_ENDPOINT, data = data, headers=headers) 
-    #     pastebin_url = r.content
-    #     print("The pastebin URL is:%s"%pastebin_url) 
+        print('***',data)
+        API_ENDPOINT='http://localhost:8000/order/marketorder/'
+        r = requests.post(url = API_ENDPOINT, data = data, headers=headers) 
+        pastebin_url = r.content
+        print("The pastebin URL is:%s"%pastebin_url) 
         return HttpResponse('<h1>hweuwe</h1>')
 
     else:
