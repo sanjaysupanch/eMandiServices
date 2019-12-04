@@ -67,6 +67,22 @@ def new_market_order(request):
         form=market(request.POST or None, request.FILES or None)
     return render(request,'future/index.html',{'form':form})
 
+def portfolio_market(request):
+    headers = {
+                        "Content-Type": "application/json",
+                        "accept": "application/json",
+                       'Authorization': 'JWT '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InJhamEiLCJleHAiOjE1NzQ0NTU4MTksImVtYWlsIjoic2hpdmFtZ3VwdGFoZHI5OEBnbWFpbC5jb20ifQ.bpScWzggOlvnNUMa4nM1aV2ikk72X_3L3eT_mRRdy10', 
+    #   Authorization: `JWT ${localStorage.getItem('token')}`,
+    }
+    API_ENDPOINT='http://localhost:8000/order/myorder/'
+    r = requests.get(url = API_ENDPOINT, headers=headers) 
+    print(r.json())
+    appointments=r.json()
+    pastebin_url = r.content
+    print("The pastebin URL is:%s"%pastebin_url) 
+    
+    return render(request,'future/portfolio.html', {'appointments':appointments})
+
 def new_futures(request):
     if request.method=="POST":
         form=futures(request.POST)
@@ -83,11 +99,11 @@ def new_futures(request):
             print(DeliveryDate)
             print(visitor_item.__dict__)
             data={"Quantity":Quantity,
-            "DeliveryDate":"2019-11-23",
+            "DeliveryDate":str(DeliveryDate),
             "ProductionMode":ProductionMode,
             "ContractPrice":ContractPrice,
             "advance":advance,
-            "AdvanceDate":"2019-11-23"
+            "AdvanceDate":str(AdvanceDate)
             
             }
             data=json.dumps(data)
