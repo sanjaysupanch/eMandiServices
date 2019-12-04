@@ -35,12 +35,13 @@ def signup(request):
 
 
 def portfolio(request):
-    response=request.get("http://127.0.0.1:8000/order/marketorder/")
-    mydata=response.json()
-    return render(request, 'accounts/portfolio.html', {
-        'CropName': mydata['CropName'],
-        'CropVariety': mydata['CropVariety'],
-        'Quantity': mydata['Quantity'],
-        'BasePrice': mydata['BasePrice'],
+    return render(request,'accounts/portfolio.html')
+    # response=request.get("http://127.0.0.1:8000/order/marketorder/")
+    # mydata=response.json()
+    # return render(request, 'accounts/portfolio.html', {
+    #     'CropName': mydata['CropName'],
+    #     'CropVariety': mydata['CropVariety'],
+    #     'Quantity': mydata['Quantity'],
+    #     'BasePrice': mydata['BasePrice'],
 
-        })
+    #    })
