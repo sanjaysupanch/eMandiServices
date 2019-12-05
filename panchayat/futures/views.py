@@ -175,4 +175,4 @@ def new_futures(request):
             return HttpResponse('<h1>hweuwe</h1>')
     else:
         form=futures(request.POST or None, request.FILES or None)
-    return render(request,'future/index.html',{'form':form})
+    return render(request,'future/new_order_futures.html',{'form':form})
