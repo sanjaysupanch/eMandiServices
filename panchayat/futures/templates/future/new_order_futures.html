@@ -11,72 +11,36 @@
 
 		<link rel="stylesheet" type="text/css" href="{% static 'library/css/style.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'library/css/skin/red.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static 'library/css/custom.css' %}">
-		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 
 	</head>
 	<body>
-
+            
 		<header id="header" class="m-has-header-tools">
+                
 			<div class="header-inner">
-
+                   
 				
 				<div class="header-content">
 					<div class="c-container">
-						<div class="header-content-inner">
+						<div>
 
 							
 							<div class="header-toggle-holder">
 
-								<!-- HEADER TOGGLE : begin -->
+								
 								<button type="button" class="header-toggle">
 									<i class="ico-open tp tp-menu"></i>
 									<i class="ico-close tp tp-cross"></i>
 									<span>Menu</span>
 								</button>
-								<!-- HEADER TOGGLE : end -->
+							
 
 							</div>
-							<!-- HEADER TOGGLE HOLDER : end -->
-
-							<!-- HEADER MENU : begin -->
-							<!-- This menu is used as both mobile menu (displayed on devices with screen width < 991px)
-							and standard header menu (only if Header element has "m-has-standard-menu" class) -->
-							<nav class="header-menu">
-								<ul>
-									<li><a href="#">Home</a>
-										<ul>
-											<li><a href="#">Home 1</a></li>
-											<li><a href="#">Home 2</a></li>
-										</ul>
-									</li>
-									<li class="m-active"><a href="#">Government</a>
-										<ul>
-											<li><a href="tow#">Town Hall</a></li>
-											<li class="m-active"><a href="#">Town Council</a></li>
-											<li><a href="#">Phone Numbers</a></li>
-											<li><a href="#">Documents</a></li>
-											<li><a href="#">Write To Mayor</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Community</a>
-										<ul>
-											<li><a href="#">News</a></li>
-											<li><a href="#">Notices</a></li>
-											<li><a href="#">Events</a></li>
-											<li><a href="#">Galleries</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Pages</a>
-										<ul>
-											<li><a href="#">Statistics</a></li>
-											<li><a href="#">Virtual Tour</a></li>
-											<li><a href="#">Town History</a></li>
-											<li><a href="#">Elements</a></li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
 							
 
 						</div>
@@ -86,103 +50,84 @@
 
 			</div>
 		</header>
-		<!-- HEADER : end -->
+		
+		<div class="header-bg z-index: 9999;">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark  z-index:-1">
+                        <a class="navbar-brand" href="#">Rallis India Limited</a>
+                        <ul class="navbar-nav ml-auto">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                          </li>
+                          <li class="nav-item">
+                                <a class="nav-link" href="#">Infrastructure</a>
+                          </li>
+                          <li class="nav-item">
+                             <a class="nav-link" href="#">Investor Relations</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Careers</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Area</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                          </li>
+                        </ul>
+                      </nav>
 
-		<!-- HEADER BG : begin -->
-		<div class="header-bg">
-
-			<!-- HEADER IMAGE : begin -->
-			<!-- To add more images just copy and edit elements with "image-layer" class (see # template for example)
-			Change autoplay speed with "data-autoplay" attribute (in seconds), works only if there are more than one image -->
 			<div class="header-image" data-autoplay="8">
 				<div class="image-layer" style="background-image: url( '{% static "images/header-03.jpg" %}' );"></div>
 				<!-- <div class="image-layer" style="background-image: url( '{% static "images/header-02.jpg" %}' );"></div> -->
 			</div>
-			<!-- HEADER IMAGE : begin -->
+	
 
 		</div>
-		<!-- HEADER BG : end -->
+        <br><br><br>
+        <br><br>
 
-		<!-- CORE : begin -->
 		<div id="core">
 			<div class="c-container">
 				<div class="row">
-
-					<!-- MIDDLE COLUMN : begin -->
 					<div class="middle-column col-md-9 col-md-push-3">
-
-						<!-- PAGE HEADER : begin -->
 						<div id="page-header" class="m-has-breadcrumbs">
-
-							<!-- PAGE TITLE : begin -->
 							<div class="page-title">
-								<h1>Town Council</h1>
+								<h1>Futures Order</h1>
 							</div>
-							<!-- PAGE TITLE : end -->
-
-							<!-- BREADCRUMBS : begin -->
 							<div class="breadcrumbs">
 								<ul>
-									<li class="home"><a href="i#">Home</a></li>
-									<li>Town Council</li>
+									<li class="home"><a href="#">Please Order Your Futures</a></li>
+									<li></li>
 								</ul>
 							</div>
-							<!-- BREADCRUMBS : end -->
-
 						</div>
-						<!-- PAGE HEADER : end -->
-
-						<!-- PAGE CONTENT : begin -->
-						<div id="page-content">
-							<div class="page-content-inner">
-
-								<div class="row">
-									<div class="col-md-6">
-
-										<!-- TEAM MEMBER : begin -->
-										<!-- To use Team Member element without portrait, remove "m-has-portrait" class from the following element
-										and remove element with "member-portrait" class -->
-										<!-- TEAM MEMBER : end -->
-
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<!-- PAGE CONTENT : end -->
-
 						<hr class="c-separator m-margin-top-small m-margin-bottom-small m-transparent hidden-lg hidden-md">
 
 					</div>
-					<!-- MIDDLE COLUMN : end -->
-
-					<!-- LEFT COLUMN : begin -->
+				
 					<div class="left-column col-md-3 col-md-pull-9">
-
-						<!-- SIDE MENU : begin -->
 						<nav class="side-menu m-left-side m-show-submenu">
 							<ul>
-								<li><a href="#">Home</a>
+								<li><a href="#">MANUFACTURING</a></li>
+								<li class="m-active"><a href="#"> PLANT GROWTH NUTRIENTS</a>
 									<ul>
-										<li><a href="#">Home 1</a></li>
-										<li><a href="#">Home 2</a></li>
+										<li><a href="#">AGRO SERVICES</a></li>
+										<li class="m-active"><a href="#">SEEDS</a></li>
+										<li><a href="#"> DISTRIBUTION NETWORK</a></li>
+										<li><a href="#">SUSTAINABILITY AT RALLIS</a></li>
+										<li><a href="#">HEALTH & SAFETY</a></li>
 									</ul>
 								</li>
-								<li class="m-active"><a href="w#">Government</a>
+								<li><a href="#">CORPORATE SOCIAL RESPONSIBILITY POLICY</a>
 									<ul>
-										<li><a href="#">Town Hall</a></li>
-										<li class="m-active"><a href="#">Town Council</a></li>
-										<li><a href="#">Phone Numbers</a></li>
-										<li><a href="#">Documents</a></li>
-										<li><a href="#">Write To Mayor</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Community</a>
-									<ul>
-										<li><a href="#">News</a></li>
-										<li><a href="#">Notices</a></li>
-										<li><a href="#">Events</a></li>
-										<li><a href="#">Galleries</a></li>
+										<li><a href="#">CLIMATE CHANGE POLICY</a></li>
+										<li><a href="#">CORPORATE GOVERNANCE
+										</a></li>
+										<li><a href="#"> INVESTOR INFORMATION</a></li>
+										<li><a href="#">OFFICES</a></li>
 									</ul>
 								</li>
 								<li><a href="#">Pages</a>
@@ -195,167 +140,143 @@
 								</li>
 							</ul>
 						</nav>
-						<!-- SIDE MENU : end -->
-
-						<!-- LEFT SIDEBAR : begin -->
+			
 						<aside class="sidebar">
 							<div class="widget-list">
 
-								<!-- DOCUMENTS WIDGET : begin -->
+							
 								<div class="widget documents-widget">
 									<div class="widget-inner">
 										<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-papers"></i>Documents</h3>
 										<div class="widget-content">
 											<ul class="document-list m-has-icons">
 
-												<!-- DOCUMENT : begin -->
+					
 												<li class="document">
 													<div class="document-inner">
 														<div class="document-icon" title="PDF File"><i class="fa fa-file-pdf-o"></i></div>
 														<h4 class="document-title">
-															<a href="documents/dummy-document2.pdf" target="_blank">Council Agenda April 24, 2014</a>
+															<a href="#" target="_blank">Company Agenda April 24, 2014</a>
 															<span class="document-filesize">(27 kB)</span>
 														</h4>
 													</div>
 												</li>
-												<!-- DOCUMENT : end -->
-
-												<!-- DOCUMENT : begin -->
+												
 												<li class="document">
 													<div class="document-inner">
 														<div class="document-icon" title="PDF File"><i class="fa fa-file-pdf-o"></i></div>
 														<h4 class="document-title">
-															<a href="documents/dummy-document.pdf" target="_blank">Town Report 2014</a>
+															<a href="#" target="_blank">Company Report 2014</a>
 															<span class="document-filesize">(24 kB)</span>
 														</h4>
 													</div>
 												</li>
-												<!-- DOCUMENT : end -->
-
-												<!-- DOCUMENT : begin -->
+												
 												<li class="document">
 													<div class="document-inner">
 														<div class="document-icon" title="Word Document"><i class="fa fa-file-word-o"></i></div>
 														<h4 class="document-title">
-															<a href="documents/dummy-document2.pdf" target="_blank">Police Contract</a>
+															<a href="#" target="_blank">Police Contract</a>
 															<span class="document-filesize">(27 kB)</span>
 														</h4>
 													</div>
 												</li>
-												<!-- DOCUMENT : end -->
-
-												<!-- DOCUMENT : begin -->
+										
 												<li class="document">
 													<div class="document-inner">
 														<div class="document-icon" title="Word Document"><i class="fa fa-file-word-o"></i></div>
 														<h4 class="document-title">
-															<a href="documents/dummy-document2.pdf" target="_blank">Public Schools Contract</a>
+															<a href="#" target="_blank">Public Company Contract</a>
 															<span class="document-filesize">(27 kB)</span>
 														</h4>
 													</div>
 												</li>
-												<!-- DOCUMENT : end -->
 
 											</ul>
 											<p class="show-all-btn"><a href="#">See All Documents</a></p>
 										</div>
 									</div>
 								</div>
-								<!-- DOCUMENTS WIDGET : end -->
 
 							</div>
 						</aside>
-						<!-- LEFT SIDEBAR : end -->
+					
 
 					</div>
-					<!-- LEFT COLUMN : end -->
+		
 
 				</div>
 			</div>
 		</div>
-		<!-- CORE : end -->
+		
 
-		<!-- FOOTER : begin -->
+	
 		<footer id="footer" class="m-has-bg">
 			<div class="footer-bg">
 				<div class="footer-inner">
 
-					<!-- FOOTER TOP : begin -->
+	
 					<div class="footer-top">
 						<div class="c-container">
 
-							<!-- BOTTOM PANEL : begin -->
+							
 							<div id="bottom-panel">
 								<div class="bottom-panel-inner">
 									<div class="row">
 										<div class="col-md-3">
 
-											<!-- TEXT WIDGET : begin -->
+							
 											<div class="widget">
 												<hr class="c-separator m-transparent hidden-lg hidden-md">
 												<div class="widget-inner">
-													<h3 class="widget-title">About TownPress</h3>
+													<h3 class="widget-title">About Us</h3>
 													<div class="widget-content">
-														<p>TownPress is a premium Municipality HTML template. It is best suited to be used as a presentation site for small towns or villages.</p>
-														<p>You can buy this responsive HTML template on <a href="#"></a>.</p>
+														<p><a href="#">Mission Vision & Values</a></p>
+														<p><a href="#">Leadership</a></p>
 													</div>
 												</div>
 											</div>
-											<!-- TEXT WIDGET : end -->
+							
 
 										</div>
 										<div class="widget-col col-md-3">
 
-											<!-- DEFINITION LIST WIDGET : begin -->
+							
 											<div class="widget definition-list-widget">
 												<hr class="c-separator m-transparent hidden-lg hidden-md">
 												<div class="widget-inner">
 													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-telephone"></i>Phone Numbers</h3>
 													<div class="widget-content">
 														<dl>
-															<dt>Town Clerk</dt>
+															<dt>Phone</dt>
 															<dd>(123) 456-7890</dd>
-															<dt>State Police</dt>
+															<dt>Phone</dt>
 															<dd>(123) 456-7891</dd>
-															<dt>Fire Department</dt>
+															<dt>Phone Department</dt>
 															<dd>(123) 456-7892</dd>
 														</dl>
 														<p class="show-all-btn"><a href="#">See All Phone Numbers</a></p>
 													</div>
 												</div>
 											</div>
-											<!-- DEFINITION LIST WIDGET : end -->
+							
 
 										</div>
 										<div class="widget-col col-md-3">
 
-											<!-- MAILCHIMP SUBSCRIBE WIDGET : begin -->
-											<!-- Please read the documentation to learn how to configure Mailchimp Subscribe widget -->
 											<div class="widget mailchimp-subscribe-widget">
 												<hr class="c-separator m-transparent hidden-lg hidden-md">
 												<div class="widget-inner">
 													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-at-sign"></i>Join Our Newsletter</h3>
 													<div class="widget-content">
 
-														<!-- Add your custom form URL into "action" attribute in following element -->
-                										<form class="mailchimp-subscribe-form" method="get"
+							                                <form class="mailchimp-subscribe-form" method="get"
                 											action="http://lsvr.us14.list-manage.com/subscribe/post-json?u=8291218baaf54ddfd7dbc6016&amp;id=f3e5d696dc&amp;c=?">
 	                    									<div class="subscribe-inner">
 
 	                    										<div class="description">
-	                    											<p>Join our newsletter to receive up to date news about our municipality.</p>
+	                    											<p>Join our newsletter to receive up to date news about our company.</p>
 																</div>
-
-														
-																
-										                        <div class="form-fields">
-										                            <input type="text" placeholder="Your Email Address" name="EMAIL" class="m-required m-email">
-										                            <button title="Subscribe" type="submit" class="submit-btn">
-																		<i class="fa fa-chevron-right"></i>
-																		<i class="fa fa-spinner fa-spin"></i>
-																	</button>
-										                        </div>
-
 	                    									</div>
                 										</form>
 
@@ -370,11 +291,11 @@
 											<div class="widget">
 												<hr class="c-separator m-transparent hidden-lg hidden-md">
 												<div class="widget-inner">
-													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-envelope"></i>Town Hall Address</h3>
+													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-envelope"></i>Company Address</h3>
 													<div class="widget-content">
-														<p>P.O. Box 123 TownPress<br>VT 12345</p>
+														<p>P.O. Box 123 Rallis India Limited<br>VT 12345</p>
 														<p>Phone: (123) 456-7890<br>Fax: (123) 456-7891<br>
-														Email: <a href="#">townhall@townpress.gov</a></p>
+														Email: <a href="#">indiarallis@rallis.gov</a></p>
 													</div>
 												</div>
 											</div>
@@ -384,22 +305,17 @@
 									</div>
 								</div>
 							</div>
-							
-
 						</div>
-					</div>
-					
-
-					
+					</div>					
 				</div>
 			</div>
         </footer>
-        
+<!--         
 		<script src="library/js/jquery-1.9.1.min.js" type="text/javascript"></script>
 		<script src="library/js/third-party.js" type="text/javascript"></script>
 		<script src="library/js/library.js" type="text/javascript"></script>
 		<script src="library/js/scripts.js" type="text/javascript"></script>
-		
+		 -->
 
 	</body>
 
