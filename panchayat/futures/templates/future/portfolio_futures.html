@@ -136,14 +136,93 @@
 
 								<div class="c-directory m-has-icon m-3-columns">
 									<div class="c-content-box">
-										<form method="POST" action="">
-											<br>
-											{% csrf_token %}
-											{{form.as_p}}
-											{% comment %} <button  type="submit">Check In</button> {% endcomment %}
-											<input type="submit" class="btn btn-primary btn-lg btn-block" style="width:100%"></input>
+										<table class="table table-striped table-hover ">
+                          <thead>
+                          <tr>
+                              <th>Running Orders</th>
+							</tr>
+							</thead>
+							</table>		  
+								<table class="table table-striped table-hover ">
+                          <thead>
+                          <tr>
+                              <th>Crop</th>
+                              <th>Quantity</th>
+                              <!-- <th>RMP Name </th> -->
+                              <th>Order Date</th>
+                              <th>Delivery Date</th>
+							  <th>Price</th>
+							  <th>Advance Date</th>
+							  <th>Advance Percentage</th>
+							  <th>Status</th>
+							 
+                          </tr>
+                          </thead>
+                          <tbody>
+                          {% for appointment in appointments %}
+                          <!-- disable() -->
+                              <tr>
+                                  <td id="a"> {{appointment.Crop}} </td>
+                                  <td> {{appointment.Quantity}} </td>
+								  <td> {{appointment.OrderDate}} </td>
+								  <td> {{appointment.DeliveryDate}} </td>
+								  <td> {{appointment.ContractPrice}} </td>
+								  <td> {{appointment.AdvanceDate}} </td>
+								  <td> {{appointment.advance}} </td>
+								  <td style="color:red"> Pending </td>
+								  {% comment %} <td><a id='attend{{appointment.id}}' href="{% url 'panel_person_form' order_id=appointment.id %}"> Attend Patient </a></td> {% endcomment %}
+                                  {% comment %} <td><a style="pointer-events: none; display: inline-block;" id='attend{{appointment.id}}' href="{{appointment.viedo_chat_link}}"> Attend Patient </a></td>
+                                  <td><a style="pointer-events: none; display: inline-block;" id='prescription{{appointment.id}}' href='{% url "prescription:Prescription_Add1" appointment_id=appointment.pk %}'> Make Prescription </a></td>
+                                  <td><button type="button" class="btn btn-default" name="check" onclick='check_link("{{appointment.date}}","{{appointment.time.start_time}}","{{appointment.id}}");'> Refresh </button></td> {% endcomment %}
 
-										</form>          
+                              </tr>
+                          {% endfor %}
+                          </tbody>
+                      </table>       
+
+					  <table class="table table-striped table-hover ">
+                          <thead>
+                          <tr>
+                              <th>Executed Orders</th>
+							</tr>
+							</thead>
+							</table>		  
+								<table class="table table-striped table-hover ">
+                          <thead>
+                          <tr>
+                              <th>Crop</th>
+                              <th>Quantity</th>
+                              <!-- <th>RMP Name </th> -->
+                              <th>Order Date</th>
+                              <th>Delivery Date</th>
+							  <th>Price</th>
+							  <th>Advance Date</th>
+							  <th>Advance Percentage</th>
+							  <th>Order Status</th>
+							 
+                          </tr>
+                          </thead>
+                          <tbody>
+                          {% for executed in executeds %}
+                          <!-- disable() -->
+                              <tr>
+                                  <td id="a"> {{executed.Crop}} </td>
+                                  <td> {{executed.Quantity}} </td>
+								  <td> {{executed.OrderDate}} </td>
+								  <td> {{executed.DeliveryDate}} </td>
+								  <td> {{executed.ContractPrice}} </td>
+								  <td> {{executed.AdvanceDate}} </td>
+								  <td> {{executed.advance}} </td>
+								  <td style="color:lightgreen">Executed</td> 
+								  {% comment %} <td><a id='attend{{appointment.id}}' href="{% url 'panel_person_form' order_id=appointment.id %}"> Attend Patient </a></td> {% endcomment %}
+                                  {% comment %} <td><a style="pointer-events: none; display: inline-block;" id='attend{{appointment.id}}' href="{{appointment.viedo_chat_link}}"> Attend Patient </a></td>
+                                  <td><a style="pointer-events: none; display: inline-block;" id='prescription{{appointment.id}}' href='{% url "prescription:Prescription_Add1" appointment_id=appointment.pk %}'> Make Prescription </a></td>
+                                  <td><button type="button" class="btn btn-default" name="check" onclick='check_link("{{appointment.date}}","{{appointment.time.start_time}}","{{appointment.id}}");'> Refresh </button></td> {% endcomment %}
+
+                              </tr>
+                          {% endfor %}
+                          </tbody>
+                      </table> 
 									</div>
 								</div>
 								

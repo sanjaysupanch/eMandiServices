@@ -61,7 +61,8 @@ def new_market_order(request):
         r = requests.post(url = API_ENDPOINT, data = data, headers=headers) 
         pastebin_url = r.content
         print("The pastebin URL is:%s"%pastebin_url) 
-        return HttpResponse('<h1>hweuwe</h1>')
+        # return HttpResponse('<h1>hweuwe</h1>')
+        return reverse('new_market1')
 
     else:
         form=market(request.POST or None, request.FILES or None)
@@ -176,3 +177,31 @@ def new_futures(request):
     else:
         form=futures(request.POST or None, request.FILES or None)
     return render(request,'future/new_order_futures.html',{'form':form})
+
+def portfolio_futures(request):
+    headers = {
+                        "Content-Type": "application/json",
+                        "accept": "application/json",
+                       'Authorization': 'JWT '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InJhamEiLCJleHAiOjE1NzQ0NTU4MTksImVtYWlsIjoic2hpdmFtZ3VwdGFoZHI5OEBnbWFpbC5jb20ifQ.bpScWzggOlvnNUMa4nM1aV2ikk72X_3L3eT_mRRdy10', 
+    #   Authorization: `JWT ${localStorage.getItem('token')}`,
+    }
+    API_ENDPOINT='http://localhost:8000/order/myfutures/'
+    r = requests.get(url = API_ENDPOINT, headers=headers) 
+    # print(r.json())
+    appointments=r.json()
+    
+    pastebin_url = r.content
+    # print('****', appointments)
+    print("The pastebin URL is:%s"%pastebin_url) 
+    print('**',appointments[0]['Crop'])
+    # API_ENDPOINT='http://localhost:8000/order/myorderexec/'
+    # r = requests.get(url = API_ENDPOINT, headers=headers) 
+    # print(r.json())
+    # executed=r.json()
+    API_ENDPOINT='http://localhost:8000/order/futureexec/'
+    r = requests.get(url = API_ENDPOINT, headers=headers) 
+    # print(r.json())
+    executed=r.json()
+    # appointments=r.json()
+    # return HttpResponse('<h1> H </h1>')
+    return render(request,'future/portfolio_futures.html', {'appointments':appointments, 'executeds':executed})
