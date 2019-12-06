@@ -58,6 +58,8 @@ def new_market_order(request):
         form=market(request.POST or None, request.FILES or None)
     return render(request,'future/index.html',{'form':form})
 
+
+
 def new_futures(request):
     if request.method=="POST":
         form=futures(request.POST)
@@ -71,8 +73,7 @@ def new_futures(request):
             ProductionMode=form.cleaned_data.get("ProductionMode")
             ContractPrice=form.cleaned_data.get("ContractPrice")
             advance=form.cleaned_data.get("advance")
-            print(DeliveryDate)
-            print(visitor_item.__dict__)
+            
             data={"Quantity":Quantity,
             "DeliveryDate":"2019-11-23",
             "ProductionMode":ProductionMode,
@@ -90,9 +91,11 @@ def new_futures(request):
     }
 
             print(data)
+            
             API_ENDPOINT='http://localhost:8000/order/futurecontract/' +str(CropName)+'/'+str(CropVariety)+'/'
             r = requests.post(url = API_ENDPOINT, data = data, headers=headers) 
             pastebin_url = r.content
+
             print("The pastebin URL is:%s"%pastebin_url) 
             return HttpResponse('<h1>hweuwe</h1>')
     else:
