@@ -65,7 +65,7 @@ def new_market_order(request):
         pastebin_url = r.content
         print("The pastebin URL is:%s" % pastebin_url)
         # return HttpResponse('<h1>hweuwe</h1>')
-        return reverse('new_market1')
+        return redirect('/futures/portfolio_market')
 
     else:
         form = market(request.POST or None, request.FILES or None)
@@ -175,8 +175,7 @@ def new_futures(request):
             }
 
             print(data)
-            API_ENDPOINT = 'http://localhost:8000/order/futurecontract/' + \
-                str(CropName)+'/'+str(CropVariety)+'/'
+            API_ENDPOINT = 'http://localhost:8000/order/futurecontract/'+str(CropName)+'/'+str(CropVariety)+'/'
             r = requests.post(url=API_ENDPOINT, data=data, headers=headers)
             pastebin_url = r.content
             print("The pastebin URL is:%s" % pastebin_url)

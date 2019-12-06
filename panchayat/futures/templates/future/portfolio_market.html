@@ -28,159 +28,36 @@
 	</head>
 	<body>
 
-		<!-- HEADER : begin -->
-		<!-- If you want to use Standard Header Menu, add "m-has-standard-menu" class to the following element (see home-2.html template for example)
-		Remove "m-has-gmap" class if you are not using Google Map in this template -->
-		<header id="header" class="m-has-header-tools m-has-gmap">
+<header id="header" class="m-has-header-tools m-has-gmap">
 			<div class="header-inner">
 
-				<!-- HEADER CONTENT : begin -->
 				<div class="header-content">
 					<div class="c-container">
 						<h1 style="color: white;">Village Panchayat</h1>
 						<div class="header-content-inner">
 
-							<!-- HEADER BRANDING : begin -->
-							<!-- Logo dimensions can be changed in library/css/custom.css
-							You can remove "m-large-logo" class from following element to use standard (smaller) version of logo -->
 							<div class="header-branding m-large-logo">
-								<a href="index-2.html">
-									<!-- <span>
-									<img src="{% static 'images/header-logo.png' %}"
-										data-hires="{% static 'images/header-logo.2x.png' %}"
-										alt="TownPress - Municipality HTML Template">
-								</span> -->
-							</a><br><br><br><br><br><br><br><br><br><br>
+								<br><br><br><br><br><br><br>
 							</div>
-							<!-- HEADER BRANDING : end -->
-
-							<!-- HEADER TOGGLE HOLDER : begin -->
-							<div class="header-toggle-holder">
-
-								<!-- HEADER TOGGLE : begin -->
-								<button type="button" class="header-toggle">
-									<i class="ico-open tp tp-menu"></i>
-									<i class="ico-close tp tp-cross"></i>
-									<span>Menu</span>
-								</button>
-								<!-- HEADER TOGGLE : end -->
-
-								<!-- HEADER GMAP SWITCHER : begin -->
-								<button type="button" class="header-gmap-switcher" title="Show on Map">
-									<i class="ico-open tp tp-map2"></i>
-									<i class="ico-close tp tp-cross"></i>
-								</button>
-								<!-- HEADER GMAP SWITCHER : end -->
-
-							</div>
-							<!-- HEADER TOGGLE HOLDER : end -->
-
-							<!-- HEADER MENU : begin -->
-							<!-- This menu is used as both mobile menu (displayed on devices with screen width < 991px)
-							and standard header menu (only if Header element has "m-has-standard-menu" class) -->
-							<nav class="header-menu">
-								<ul>
-									<li><a href="index-2.html">Home</a>
-										<ul>
-											<li><a href="index-2.html">Home 1</a></li>
-											<li><a href="home-2.html">Home 2</a></li>
-										</ul>
-									</li>
-									<li><a href="town-hall.html">Government</a>
-										<ul>
-											<li><a href="town-hall.html">Town Hall</a></li>
-											<li><a href="town-council.html">Town Council</a></li>
-											<li><a href="phone-numbers.html">Phone Numbers</a></li>
-											<li><a href="document-list.html">Documents</a></li>
-											<li><a href="contact.html">Write To Mayor</a></li>
-										</ul>
-									</li>
-									<li><a href="post-list.html">Community</a>
-										<ul>
-											<li><a href="post-list.html">News</a></li>
-											<li><a href="notice-list.html">Notices</a></li>
-											<li><a href="event-list.html">Events</a></li>
-											<li><a href="gallery-list.html">Galleries</a></li>
-										</ul>
-									</li>
-									<li><a href="statistics.html">Pages</a>
-										<ul>
-											<li><a href="statistics.html">Statistics</a></li>
-											<li><a href="virtual-tour.html">Virtual Tour</a></li>
-											<li><a href="town-history.html">Town History</a></li>
-											<li><a href="elements.html">Elements</a></li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
-							<!-- HEADER MENU : end -->
-
-							<!-- HEADER TOOLS : begin -->
-							<div class="header-tools">
-
-								<!-- HEADER SEARCH : begin -->
-								<div class="header-search">
-									<form method="get" action="http://demos.lsvr.sk/townpress.html/demo/search-results.html" class="c-search-form">
-										<div class="form-fields">
-											<input type="text" value="" placeholder="Search this site..." name="s">
-											<button type="submit" class="submit-btn"><i class="tp tp-magnifier"></i></button>
-										</div>
-									</form>
-								</div>
-								<!-- HEADER SEARCH : end -->
-
-								<!-- HEADER GMAP SWITCHER : begin -->
-								<!-- Remove following block if you are not using Google Map in this template -->
-								<button type="button" class="header-gmap-switcher" title="Show on Map">
-									<i class="ico-open tp tp-map2"></i>
-									<i class="ico-close tp tp-cross"></i>
-									<span>Map</span>
-								</button>
-								<!-- HEADER GMAP SWITCHER : end -->
-
-							</div>
-							<!-- HEADER TOOLS : end -->
+							
+						
 
 						</div>
 					</div>
 				</div>
-				<!-- HEADER CONTENT : end -->
-
-				<!-- HEADER GMAP : begin -->
-				<!-- Add your address into "data-address" attribute
-				Change zoom level with "data-zoom" attribute, bigger number = bigger zoom
-				Change map type with "data-maptype" attribute, values: roadmap | terrain | hybrid | satellite
-				API KEY IS REQUIRED! More info https://developers.google.com/maps/documentation/javascript/get-api-key -->
-				<div class="header-gmap">
-					<div class="gmap-canvas"
-						data-google-api-key="AIzaSyAZhg-YFUyvDhxDt-lezjUS-5F_8he--f0"
-						data-address="Main St, Stowe, VT 05672, USA"
-						data-zoom="17"
-						data-maptype="hybrid"
-						data-enable-mousewheel="true">
-					</div>
-				</div>
-				<!-- HEADER GMAP : end -->
+				
 
 			</div>
 		</header>
-		<!-- HEADER : end -->
-
-		<!-- HEADER BG : begin -->
+		
 		<div class="header-bg">
 
-			<!-- HEADER IMAGE : begin -->
-			<!-- To add more images just copy and edit elements with "image-layer" class (see home-2.html template for example)
-			Change autoplay speed with "data-autoplay" attribute (in seconds), works only if there are more than one image -->
 			<div class="header-image" data-autoplay="8">
 				<div class="image-layer" style="background-image: url( '{% static "images/header-01.jpg" %}' );"></div>
-				<!-- div class="image-layer" style="background-image: url( 'images/header-02.jpg' );"></div -->
 			</div>
-			<!-- HEADER IMAGE : begin -->
+			
 
 		</div>
-		<!-- HEADER BG : end -->
-
 		<!-- CORE : begin -->
 		<div id="core">
 			<div class="c-container">
@@ -332,35 +209,32 @@
 						<!-- SIDE MENU : begin -->
 						<nav class="side-menu m-left-side m-show-submenu">
 							<ul>
-								<li><a href="index-2.html">Home</a>
+								<li><a href="#">Home</a>
+								
+								</li>
+								<li><a href="#">Government</a>
 									<ul>
-										<li><a href="index-2.html">Home 1</a></li>
-										<li><a href="home-2.html">Home 2</a></li>
+										<li><a href="#">Town Hall</a></li>
+										<li><a href="#">Town Council</a></li>
+										<li><a href="#">Phone Numbers</a></li>
+										<li><a href="#">Documents</a></li>
+										<li><a href="#">Write To Mayor</a></li>
 									</ul>
 								</li>
-								<li><a href="town-hall.html">Government</a>
+								<li><a href="#">Community</a>
 									<ul>
-										<li><a href="town-hall.html">Town Hall</a></li>
-										<li><a href="town-council.html">Town Council</a></li>
-										<li><a href="phone-numbers.html">Phone Numbers</a></li>
-										<li><a href="document-list.html">Documents</a></li>
-										<li><a href="contact.html">Write To Mayor</a></li>
+										<li><a href="#">News</a></li>
+										<li><a href="#">Notices</a></li>
+										<li><a href="#">Events</a></li>
+										<li><a href="#">Galleries</a></li>
 									</ul>
 								</li>
-								<li><a href="post-list.html">Community</a>
+								<li><a href="#">Pages</a>
 									<ul>
-										<li><a href="post-list.html">News</a></li>
-										<li><a href="notice-list.html">Notices</a></li>
-										<li><a href="event-list.html">Events</a></li>
-										<li><a href="gallery-list.html">Galleries</a></li>
-									</ul>
-								</li>
-								<li><a href="statistics.html">Pages</a>
-									<ul>
-										<li><a href="statistics.html">Statistics</a></li>
-										<li><a href="virtual-tour.html">Virtual Tour</a></li>
-										<li><a href="town-history.html">Town History</a></li>
-										<li><a href="elements.html">Elements</a></li>
+										<li><a href="#">Statistics</a></li>
+										<li><a href="#">Virtual Tour</a></li>
+										<li><a href="#">Town History</a></li>
+										<li><a href="#">Elements</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -371,70 +245,54 @@
 						<aside class="sidebar">
 							<div class="widget-list">
 
-								<!-- DOCUMENTS WIDGET : begin -->
-								<div class="widget documents-widget">
+									<div class="widget documents-widget">
 									<div class="widget-inner">
 										<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-papers"></i>Documents</h3>
 										<div class="widget-content">
 											<ul class="document-list m-has-icons">
 
-												<!-- DOCUMENT : begin -->
 												<li class="document">
 													<div class="document-inner">
 														<div class="document-icon" title="PDF File"><i class="fa fa-file-pdf-o"></i></div>
 														<h4 class="document-title">
-															<a href="documents/dummy-document2.pdf" target="_blank">Council Agenda April 24, 2015</a>
+															<a href="#" target="_blank">Council Agenda April 24, 2019</a>
 															<span class="document-filesize">(27 kB)</span>
 														</h4>
 													</div>
 												</li>
-												<!-- DOCUMENT : end -->
-
-												<!-- DOCUMENT : begin -->
 												<li class="document">
 													<div class="document-inner">
 														<div class="document-icon" title="PDF File"><i class="fa fa-file-pdf-o"></i></div>
 														<h4 class="document-title">
-															<a href="documents/dummy-document.pdf" target="_blank">Town Report 2015</a>
+															<a href="#" target="_blank">Village Report 2019</a>
 															<span class="document-filesize">(24 kB)</span>
 														</h4>
 													</div>
 												</li>
-												<!-- DOCUMENT : end -->
-
-												<!-- DOCUMENT : begin -->
 												<li class="document">
 													<div class="document-inner">
 														<div class="document-icon" title="Word Document"><i class="fa fa-file-word-o"></i></div>
 														<h4 class="document-title">
-															<a href="documents/dummy-document2.pdf" target="_blank">Police Contract</a>
+															<a href="#" target="_blank">Police Contract</a>
 															<span class="document-filesize">(27 kB)</span>
 														</h4>
 													</div>
 												</li>
-												<!-- DOCUMENT : end -->
-
-												<!-- DOCUMENT : begin -->
 												<li class="document">
 													<div class="document-inner">
 														<div class="document-icon" title="Word Document"><i class="fa fa-file-word-o"></i></div>
 														<h4 class="document-title">
-															<a href="documents/dummy-document2.pdf" target="_blank">Public Schools Contract</a>
+															<a href="#" target="_blank">Public Schools Contract</a>
 															<span class="document-filesize">(27 kB)</span>
 														</h4>
 													</div>
 												</li>
-												<!-- DOCUMENT : end -->
 
 											</ul>
-											<p class="show-all-btn"><a href="document-list.html">See All Documents</a></p>
+											<p class="show-all-btn"><a href="#">See All Documents</a></p>
 										</div>
 									</div>
 								</div>
-								<!-- DOCUMENTS WIDGET : end -->
-
-								<!-- LOCALE INFO WIDGET : begin -->
-								<!-- to remove background image from this widget, simply remove "m-has-bg" class from the following element -->
 								<div class="widget locale-info-widget m-has-bg">
 									<div class="widget-inner">
 										<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-map-marker"></i>Locale Info</h3>
@@ -442,18 +300,15 @@
 											<ul>
 												<li>
 													<div class="row-title"><h4>Country</h4></div>
-													<div class="row-value">United States</div>
+													<div class="row-value">India</div>
 												</li>
 												<li>
 													<div class="row-title"><h4>State</h4></div>
-													<div class="row-value">Vermont</div>
+													<div class="row-value">Andhra Pradesh</div>
 												</li>
+												
 												<li>
-													<div class="row-title"><h4>County</h4></div>
-													<div class="row-value">Lamoille</div>
-												</li>
-												<li>
-													<div class="row-title"><h4>Area</h4></div>
+													<div class="row-title"><h4>Sricity Area</h4></div>
 													<div class="row-value">72.7 sq mi (188.4 km<sup>2</sup>)</div>
 												</li>
 												<li>
@@ -466,32 +321,27 @@
 												</li>
 												<li>
 													<div class="row-title"><h4>Time zone</h4></div>
-													<div class="row-value">Eastern (EST) (UTC-5)</div>
+													<div class="row-value">South East</div>
 												</li>
 												<li>
 													<div class="row-title"><h4>ZIP code</h4></div>
-													<div class="row-value">05672</div>
+													<div class="row-value">517646</div>
 												</li>
 											</ul>
             							</div>
 									</div>
 								</div>
-								<!-- LOCALE INFO WIDGET : end -->
-
-								<!-- FEATURED GALLERY WIDGET : begin -->
-								<div class="widget featured-gallery-widget">
+									<div class="widget featured-gallery-widget">
 									<div class="widget-inner">
 										<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-pictures"></i>Featured Gallery</h3>
 										<div class="widget-content">
-											<div class="gallery-image" title="Streets of TownPress">
-												<a href="gallery-detail.html"><img src=" {% static 'images/featured-gallery-01.jpg' %}" alt=""></a>
+											<div class="gallery-image" title="Streets of VillagePress">
+												<a href="#"><img src=" {% static 'images/featured-gallery-01.jpg' %}" alt=""></a>
 											</div>
-											<p class="show-all-btn"><a href="gallery-list.html">See All Galleries</a></p>
+											<p class="show-all-btn"><a href="#">See All Galleries</a></p>
             							</div>
 									</div>
 								</div>
-								<!-- FEATURED GALLERY WIDGET : end -->
-
 							</div>
 						</aside>
 						<!-- LEFT SIDEBAR : end -->
@@ -524,167 +374,101 @@
 			<div class="footer-bg">
 				<div class="footer-inner">
 
-					<!-- FOOTER TOP : begin -->
 					<div class="footer-top">
 						<div class="c-container">
 
-							<!-- BOTTOM PANEL : begin -->
 							<div id="bottom-panel">
 								<div class="bottom-panel-inner">
 									<div class="row">
 										<div class="col-md-3">
 
-											<!-- TEXT WIDGET : begin -->
+											
 											<div class="widget">
 												<hr class="c-separator m-transparent hidden-lg hidden-md">
 												<div class="widget-inner">
-													<h3 class="widget-title">About TownPress</h3>
+													<h3 class="widget-title">About Village Panchayat</h3>
 													<div class="widget-content">
-														<p>TownPress is a premium Municipality HTML template. It is best suited to be used as a presentation site for small towns or villages.</p>
-														<p>You can buy this responsive HTML template on <a href="http://themeforest.net/user/LSVRthemes/portfolio">ThemeForest</a>.</p>
+														<p>Panchayat is best suited to be used as a presentation site for small towns or villages.</p>
+														
 													</div>
 												</div>
 											</div>
-											<!-- TEXT WIDGET : end -->
+										
 
 										</div>
 										<div class="widget-col col-md-3">
 
-											<!-- DEFINITION LIST WIDGET : begin -->
+											
 											<div class="widget definition-list-widget">
 												<hr class="c-separator m-transparent hidden-lg hidden-md">
 												<div class="widget-inner">
 													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-telephone"></i>Phone Numbers</h3>
 													<div class="widget-content">
 														<dl>
-															<dt>Town Clerk</dt>
+															<dt>Panchayat Clerk</dt>
 															<dd>(123) 456-7890</dd>
 															<dt>State Police</dt>
 															<dd>(123) 456-7891</dd>
 															<dt>Fire Department</dt>
 															<dd>(123) 456-7892</dd>
 														</dl>
-														<p class="show-all-btn"><a href="phone-numbers.html">See All Phone Numbers</a></p>
+														<p class="show-all-btn"><a href="#">See All Phone Numbers</a></p>
 													</div>
 												</div>
 											</div>
-											<!-- DEFINITION LIST WIDGET : end -->
+											
 
 										</div>
 										<div class="widget-col col-md-3">
 
-											<!-- MAILCHIMP SUBSCRIBE WIDGET : begin -->
-											<!-- Please read the documentation to learn how to configure Mailchimp Subscribe widget -->
 											<div class="widget mailchimp-subscribe-widget">
 												<hr class="c-separator m-transparent hidden-lg hidden-md">
 												<div class="widget-inner">
 													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-at-sign"></i>Join Our Newsletter</h3>
 													<div class="widget-content">
 
-														<!-- Add your custom form URL into "action" attribute in following element -->
-                										<form class="mailchimp-subscribe-form" method="get"
-                											action="http://lsvr.us14.list-manage.com/subscribe/post-json?u=8291218baaf54ddfd7dbc6016&amp;id=f3e5d696dc&amp;c=?">
-	                    									<div class="subscribe-inner">
+                										
 
 	                    										<div class="description">
-	                    											<p>Join our newsletter to receive up to date news about our municipality.</p>
-																</div>
-
-																<!-- VALIDATION ERROR MESSAGE : begin -->
-																<p class="c-alert-message m-warning m-validation-error" style="display: none;"><i class="ico fa fa-exclamation-circle"></i>
-																<span>Your email address is required.</span></p>
-																<!-- VALIDATION ERROR MESSAGE : end -->
-
-																<!-- SENDING REQUEST ERROR MESSAGE : begin -->
-																<p class="c-alert-message m-warning m-request-error" style="display: none;"><i class="ico fa fa-exclamation-circle"></i>
-																<span>There was a connection problem. Try again later.</span></p>
-																<!-- SENDING REQUEST ERROR MESSAGE : end -->
-
-																<!-- SUCCESS MESSAGE : begin -->
-																<p class="c-alert-message m-success" style="display: none;"><i class="ico fa fa-check-circle"></i>
-																<span><strong>Form sent successfully!</strong></span></p>
-																<!-- SUCCESS MESSAGE : end -->
-
+	                    											<p>Join our newsletter to receive up to date news about our villages.</p>
+																</div>																
 										                        <div class="form-fields">
 										                            <input type="text" placeholder="Your Email Address" name="EMAIL" class="m-required m-email">
-										                            <button title="Subscribe" type="submit" class="submit-btn">
-																		<i class="fa fa-chevron-right"></i>
-																		<i class="fa fa-spinner fa-spin"></i>
-																	</button>
+										                            
 										                        </div>
 
-	                    									</div>
-                										</form>
+	                    									
 
     												</div>
 												</div>
 											</div>
-											<!-- MAILCHIMP SUBSCRIBE WIDGET : end -->
 
 										</div>
 										<div class="widget-col col-md-3">
 
-											<!-- TEXT WIDGET : begin -->
 											<div class="widget">
 												<hr class="c-separator m-transparent hidden-lg hidden-md">
 												<div class="widget-inner">
-													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-envelope"></i>Town Hall Address</h3>
+													<h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-envelope"></i>Panchayat Hall Address</h3>
 													<div class="widget-content">
 														<p>P.O. Box 123 TownPress<br>VT 12345</p>
 														<p>Phone: (123) 456-7890<br>Fax: (123) 456-7891<br>
-														Email: <a href="#">townhall@townpress.gov</a></p>
+														Email: <a href="#">panchayathall@panchayatpress.gov</a></p>
 													</div>
 												</div>
 											</div>
-											<!-- TEXT WIDGET : end -->
+											
 
 										</div>
 									</div>
 								</div>
 							</div>
-							<!-- BOTTOM PANEL : end -->
-
 						</div>
 					</div>
-					<!-- FOOTER TOP : end -->
-
-					<!-- FOOTER BOTTOM : begin -->
-					<div class="footer-bottom">
-						<div class="footer-bottom-inner">
-							<div class="c-container">
-
-								<!-- FOOTER SOCIAL : begin -->
-								<!-- Here is the list of some popular social networks. There are more icons you can use, just refer to the documentation -->
-								<div class="footer-social">
-									<ul class="c-social-icons">
-										<li class="ico-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li class="ico-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li class="ico-googleplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-										<li class="ico-instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-									</ul>
-								</div>
-								<!-- FOOTER SOCIAL : end -->
-
-								<!-- FOOTER MENU : begin -->
-								<nav class="footer-menu">
-									<ul>
-										<li><a href="#">Home</a></li>
-										<li><a href="#">Documentation</a></li>
-										<li><a href="#">Purchase</a></li>
-									</ul>
-								</nav>
-								<!-- FOOTER MENU : end -->
-
-								
-
-							</div>
-						</div>
-					</div>
-					<!-- FOOTER BOTTOM : end -->
-
 				</div>
 			</div>
 		</footer>
+		
 		<!-- FOOTER : end -->
 
 		<!-- SCRIPTS : begin -->
