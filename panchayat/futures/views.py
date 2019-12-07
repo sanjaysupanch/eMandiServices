@@ -10,10 +10,12 @@ from django.contrib.auth import authenticate, login, logout
 import requests
 import json
 
-# Create your views here.
-
+f = open("token.txt", 'r')
+tokendata = f.read()
+f.close()
 
 def home(request):
+    # print(tokendata)
     return render(request, 'futures_new_order.html')
 
 
@@ -55,7 +57,7 @@ def new_market_order(request):
         headers = {
             "Content-Type": "application/json",
             "accept": "application/json",
-            'Authorization': 'JWT '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InJhamEiLCJleHAiOjE1NzQ0NTU4MTksImVtYWlsIjoic2hpdmFtZ3VwdGFoZHI5OEBnbWFpbC5jb20ifQ.bpScWzggOlvnNUMa4nM1aV2ikk72X_3L3eT_mRRdy10',
+            'Authorization': 'JWT '+ tokendata,
             #   Authorization: `JWT ${localStorage.getItem('token')}`,
         }
 
@@ -76,7 +78,7 @@ def portfolio_market(request):
     headers = {
         "Content-Type": "application/json",
                         "accept": "application/json",
-        'Authorization': 'JWT '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InJhamEiLCJleHAiOjE1NzQ0NTU4MTksImVtYWlsIjoic2hpdmFtZ3VwdGFoZHI5OEBnbWFpbC5jb20ifQ.bpScWzggOlvnNUMa4nM1aV2ikk72X_3L3eT_mRRdy10',
+        'Authorization': 'JWT '+ tokendata,
         #   Authorization: `JWT ${localStorage.getItem('token')}`,
     }
     API_ENDPOINT = 'http://localhost:8000/order/myorder/'
@@ -124,7 +126,7 @@ def sell_market(request, order_id):
     headers = {
         "Content-Type": "application/json",
                         "accept": "application/json",
-        'Authorization': 'JWT '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InJhamEiLCJleHAiOjE1NzQ0NTU4MTksImVtYWlsIjoic2hpdmFtZ3VwdGFoZHI5OEBnbWFpbC5jb20ifQ.bpScWzggOlvnNUMa4nM1aV2ikk72X_3L3eT_mRRdy10',
+        'Authorization': 'JWT '+tokendata,
         #   Authorization: `JWT ${localStorage.getItem('token')}`,
     }
 
@@ -172,7 +174,7 @@ def new_futures(request):
             headers = {
                 "Content-Type": "application/json",
                 "accept": "application/json",
-                'Authorization': 'JWT '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InJhamEiLCJleHAiOjE1NzQ0NTU4MTksImVtYWlsIjoic2hpdmFtZ3VwdGFoZHI5OEBnbWFpbC5jb20ifQ.bpScWzggOlvnNUMa4nM1aV2ikk72X_3L3eT_mRRdy10',
+                'Authorization': 'JWT '+ tokendata,
                 #   Authorization: `JWT ${localStorage.getItem('token')}`,
             }
 
@@ -191,7 +193,7 @@ def portfolio_futures(request):
     headers = {
         "Content-Type": "application/json",
                         "accept": "application/json",
-        'Authorization': 'JWT '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InJhamEiLCJleHAiOjE1NzQ0NTU4MTksImVtYWlsIjoic2hpdmFtZ3VwdGFoZHI5OEBnbWFpbC5jb20ifQ.bpScWzggOlvnNUMa4nM1aV2ikk72X_3L3eT_mRRdy10',
+        'Authorization': 'JWT '+ tokendata,
         #   Authorization: `JWT ${localStorage.getItem('token')}`,
     }
     API_ENDPOINT = 'http://localhost:8000/order/myfutures/'

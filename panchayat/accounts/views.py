@@ -32,11 +32,9 @@ def signup(request):
     return render(request, 'accounts/signup.html', {'form': form})
 
 def user_login(request):
-    
     if  request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        
         data={"username":username, "password":password }
         data=json.dumps(data)
         headers = {
@@ -48,27 +46,31 @@ def user_login(request):
         API_ENDPOINT='http://127.0.0.1:3000/token-auth/'
             
         r = requests.post(url = API_ENDPOINT, data = data, headers=headers) 
-        print("@@@@@@@@@@@",type(r))
         pastebin_url = r.content
-        print("The pastebin URL is:%s"%pastebin_url)
+        print("\nThe pastebin URL is:%s"%pastebin_url)
+        k=r.json()
+        # print("=====================>", k['user']['username'])
+        token_data=k["token"]
+        
+        # print("token data =>", token_data)
 
+        file =open('token.txt', 'w')
+        file.write(token_data)
+        file.close()
         user=username
-
         arr=['1san', 'san', 'subu']
 
         t = user in arr
-        
+
         if t:
-
             return HttpResponseRedirect(reverse('index'))
-
         else:
             return HttpResponse("Your account was inactive.")
-        
-        
-     
     else:
         return render(request, 'accounts/user_login.html', {})
+
+
+
 
 
 def portfolio(request):
