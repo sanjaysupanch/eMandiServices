@@ -7,7 +7,7 @@
 
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TownPress - Municipality HTML Template</title>
+        <title>Village Panchayat</title>
         <link rel="shortcut icon" href="{% static 'images/favicon.png'">
 
 		<!-- GOOGLE FONTS : begin -->
@@ -117,7 +117,7 @@
 							  <th>Bid 2</th>
 							  <th>Bid 3</th>
 							  <th>Sell</th>
-                              <th> </th>
+                              
 
                           </tr>
                           </thead>
@@ -134,7 +134,7 @@
 								  <td> {{appointment.bid1}} </td>
 								  <td> {{appointment.bid2}} </td>
 								  <td> {{appointment.bid3}} </td>
-								  <td><a id='attend{{appointment.id}}' href="{% url 'panel_person_form' order_id=appointment.id %}"> Attend Patient </a></td>
+								  <td><a href="{% url 'panel_person_form' appointment.id appointment.bid1 %}"> Sell Order  &nbsp;  </a></td>
                                   {% comment %} <td><a style="pointer-events: none; display: inline-block;" id='attend{{appointment.id}}' href="{{appointment.viedo_chat_link}}"> Attend Patient </a></td>
                                   <td><a style="pointer-events: none; display: inline-block;" id='prescription{{appointment.id}}' href='{% url "prescription:Prescription_Add1" appointment_id=appointment.pk %}'> Make Prescription </a></td>
                                   <td><button type="button" class="btn btn-default" name="check" onclick='check_link("{{appointment.date}}","{{appointment.time.start_time}}","{{appointment.id}}");'> Refresh </button></td> {% endcomment %}
@@ -161,6 +161,7 @@
                               <th>Production Mode</th>
                               <th>Base Price</th>
                               <th>Closing Date</th>
+							  
 							  {% comment %} <th>Bid 1</th>
 							  <th>Bid 2</th>
 							  <th>Bid 3</th>
@@ -237,6 +238,7 @@
 										<li><a href="#">Elements</a></li>
 									</ul>
 								</li>
+								<li><a href="/futures/new_market">New Market Order</a>
 							</ul>
 						</nav>
 						<!-- SIDE MENU : end -->

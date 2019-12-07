@@ -67,7 +67,7 @@ def new_market_order(request):
         pastebin_url = r.content
         print("The pastebin URL is:%s" % pastebin_url)
         # return HttpResponse('<h1>hweuwe</h1>')
-        return redirect('/futures/portfolio_market')
+        return redirect('new_market1')
 
     else:
         form = market(request.POST or None, request.FILES or None)
@@ -94,10 +94,10 @@ def portfolio_market(request):
 
     for data in appointments:
         order = data['id']
-        bid1 = 0
-        bid2 = 0
-        bid3 = 0
-        bidslist = [0, 0, 0]
+        bid1 = 0.0
+        bid2 = 0.0
+        bid3 = 0.0
+        bidslist = [0.0, 0.0, 0.0]
         for bid in bids:
             if(bid['order'] == order):
                 bidslist.append(bid['price'])
@@ -115,34 +115,44 @@ def portfolio_market(request):
 
     API_ENDPOINT = 'http://localhost:8000/order/myorderexec/'
     r = requests.get(url=API_ENDPOINT, headers=headers)
-    print(r.json())
+    # print(r.json())
     executed = r.json()
+    # print('@@', r.json())
+    # for data in r.json():
+    #     print(data['id'])
+    #     API_ENDPOINT = 'http://localhost:8000/order/executedorder/'+str(data['id'])+'/'
+    #     p = requests.get(url=API_ENDPOINT, headers=headers)
+    #     print(p.content)
+    # for order in r.content:
+    #     print(order)
     # appointments=r.json()
     return render(request, 'future/portfolio_market.html', {'appointments': appointments, 'executed': executed})
 
 
-def sell_market(request, order_id):
+def sell_market(request, order_id, bid):
     print(order_id)
+    print(bid)
     headers = {
         "Content-Type": "application/json",
-                        "accept": "application/json",
+        "accept": "application/json",
         'Authorization': 'JWT '+tokendata,
         #   Authorization: `JWT ${localStorage.getItem('token')}`,
     }
 
     API_ENDPOINT = 'http://localhost:8000/order/marketorder/'+str(order_id)+'/'
     r = requests.get(url=API_ENDPOINT, headers=headers)
-    data = r.json()
+    data = r.json()[0]
+    print('&&',data)
     data = json.dumps(data)
     print('###', data)
 
-    API_ENDPOINT = 'http://localhost:8000/order/marketorder/'+str(order_id)+'/'
+    API_ENDPOINT = 'http://localhost:8000/order/marketorder/'+str(order_id)+'/'+str(bid)+'/'
     r = requests.put(url=API_ENDPOINT, data=data, headers=headers)
     pastebin_url = r.content
     # print('****', appointments)
     print("The pastebin URL is:%s" % pastebin_url)
 
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return redirect('new_market1')
 
 
 
@@ -177,13 +187,13 @@ def new_futures(request):
                 'Authorization': 'JWT '+ tokendata,
                 #   Authorization: `JWT ${localStorage.getItem('token')}`,
             }
-
+            print('66666666666666666666666666')
             print(data)
             API_ENDPOINT = 'http://localhost:8000/order/futurecontract/'+str(CropName)+'/'+str(CropVariety)+'/'
             r = requests.post(url=API_ENDPOINT, data=data, headers=headers)
             pastebin_url = r.content
             print("The pastebin URL is:%s" % pastebin_url)
-            return HttpResponse('<h1>hweuwe</h1>')
+            return redirect('portfolio_futures')
     else:
         form = futures(request.POST or None, request.FILES or None)
     return render(request, 'future/new_order_futures.html', {'form': form})

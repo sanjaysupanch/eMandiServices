@@ -43,7 +43,7 @@ def user_login(request):
                 "accept": "application/json",
             }
         
-        API_ENDPOINT='http://127.0.0.1:3000/token-auth/'
+        API_ENDPOINT='http://127.0.0.1:8000/token-auth/'
             
         r = requests.post(url = API_ENDPOINT, data = data, headers=headers) 
         pastebin_url = r.content
@@ -58,7 +58,7 @@ def user_login(request):
         file.write(token_data)
         file.close()
         user=username
-        arr=['1san', 'san', 'subu']
+        arr=['raja']
 
         t = user in arr
 
