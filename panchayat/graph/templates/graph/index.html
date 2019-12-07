@@ -1,0 +1,906 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mystic</title>
+  <!-- Iconic Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <link href="../../../static/graph/vendors/iconic-fonts/font-awesome/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../static/graph/vendors/iconic-fonts/flat-icons/flaticon.css">
+  <link rel="stylesheet" href="../../../static/graph/vendors/iconic-fonts/cryptocoins/cryptocoins.css">
+  <link rel="stylesheet" href="../../../static/graph/vendors/iconic-fonts/cryptocoins/cryptocoins-colors.css">
+  <!-- Bootstrap core CSS -->
+
+  <link href="../../../static/graph/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../static/graph/assets/css/jquery-ui.min.css" rel="stylesheet">
+  <link href="../../../static/graph/assets/css/slick.css" rel="stylesheet">
+  <link href="../../../static/graph/assets/css/style.css" rel="stylesheet">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico"> -->
+  
+</head>
+
+<body>
+  <!-- {{price}} -->
+  <!-- {% for i in timestamp %}
+    {{i}}
+  {%endfor%} -->
+  <!-- Preloader -->
+  <!-- <div id="preloader-wrap">
+    <div class="spinner spinner-8">
+      <div class="ms-circle1 ms-child"></div>
+      <div class="ms-circle2 ms-child"></div>
+      <div class="ms-circle3 ms-child"></div>
+      <div class="ms-circle4 ms-child"></div>
+      <div class="ms-circle5 ms-child"></div>
+      <div class="ms-circle6 ms-child"></div>
+      <div class="ms-circle7 ms-child"></div>
+      <div class="ms-circle8 ms-child"></div>
+      <div class="ms-circle9 ms-child"></div>
+      <div class="ms-circle10 ms-child"></div>
+      <div class="ms-circle11 ms-child"></div>
+      <div class="ms-circle12 ms-child"></div>
+    </div>
+  </div> -->
+
+  <!-- Main Content -->
+  <main class="body-content">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar ms-navbar">
+
+      <div>
+        <!-- <span class="ms-toggler-bar bg-primary"></span>
+        <span class="ms-toggler-bar bg-primary"></span>
+        <span class="ms-toggler-bar bg-primary"></span> -->
+      </div>
+
+
+      <!-- <div class="logo-sn logo-sm ms-d-block-sm">
+        <a class="pl-0 ml-0 text-center navbar-brand mr-0" href="index.html"><img src="assets/img/logo-sm-dark.png" alt="logo"> </a>
+      </div> -->
+      <div class="ms-text-danger"><b style="height:auto;">Market Mandi</b>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      </div>
+      <ul class="ms-nav-list ms-inline mb-0" id="ms-nav-options">
+        <li class="ms-nav-item ms-search-form pb-0 py-0">
+          <form class="ms-form" method="post">
+            <div class="ms-form-group my-0 mb-0 has-icon fs-14">
+              <input type="search" class="ms-form-input" name="search" placeholder="Search here..." value="">
+              <i class="flaticon-search text-disabled"></i>
+            </div>
+          </form>
+        </li>
+        <li class="ms-nav-item dropdown">
+          <a href="#" class="text-disabled ms-has-notification" id="mailDropdown" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"><i class="flaticon-mail"></i></a>
+
+        </li>
+        <li class="ms-nav-item dropdown">
+          <a href="#" class="text-disabled ms-has-notification" id="notificationDropdown" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"><i class="flaticon-bell"></i></a>
+          <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown">
+            <li class="dropdown-menu-header">
+              <h6 class="dropdown-header ms-inline m-0"><span class="text-disabled">Notifications</span></h6><span
+                class="badge badge-pill badge-info">4 New</span>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="ms-scrollable ms-dropdown-list">
+              <a class="media p-2" href="#">
+                <div class="media-body">
+                  <span>12 ways to improve your crypto dashboard</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 30 seconds ago</p>
+                </div>
+              </a>
+              <a class="media p-2" href="#">
+                <div class="media-body">
+                  <span>You have newly registered users</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 45 minutes ago</p>
+                </div>
+              </a>
+              <a class="media p-2" href="#">
+                <div class="media-body">
+                  <span>Your account was logged in from an unauthorized IP</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 2 hours ago</p>
+                </div>
+              </a>
+              <a class="media p-2" href="#">
+                <div class="media-body">
+                  <span>An application form has been submitted</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 1 day ago</p>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-menu-footer text-center">
+              <a href="#">View all Notifications</a>
+            </li>
+          </ul>
+        </li>
+        <li class="ms-nav-item">
+          <a href="#" class="text-disabled ms-toggler" data-target="#ms-recent-activity" data-toggle="slideRight"><i
+              class="flaticon-menu"></i></a>
+        </li>
+        <li class="ms-nav-item ms-nav-user dropdown">
+          <a href="#" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img
+              class="ms-user-img ms-img-round float-right" src="../../../static/graph/assets/img/people/people-5.jpg"
+              alt="people"> </a>
+          <ul class="dropdown-menu dropdown-menu-right user-dropdown" aria-labelledby="userDropdown">
+            <li class="dropdown-menu-header">
+              <h6 class="dropdown-header ms-inline m-0"><span class="text-disabled">Welcome, Anny Farisha</span></h6>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="ms-dropdown-list">
+              <a class="media fs-14 p-2" href="#"> <span><i class="flaticon-user mr-2"></i> Profile</span> </a>
+              <a class="media fs-14 p-2" href="#"> <span><i class="flaticon-mail mr-2"></i> Inbox</span> <span
+                  class="badge badge-pill badge-info">3</span> </a>
+              <a class="media fs-14 p-2" href="#"> <span><i class="flaticon-gear mr-2"></i> Account Settings</span> </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-menu-footer">
+              <a class="media fs-14 p-2" href="#"> <span><i class="flaticon-security mr-2"></i> Lock</span> </a>
+            </li>
+            <li class="dropdown-menu-footer">
+              <a class="media fs-14 p-2" href="#"> <span><i class="flaticon-shut-down mr-2"></i> Logout</span> </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- Body Content Wrapper -->
+    <div class="ms-content-wrapper">
+      <div class="row">
+
+        <!-- News Flash -->
+        <div class="col-md-12">
+          <div class="ms-panel">
+            <div class="ms-panel-body ms-news-flash-container">
+              <div class="ms-news-update">
+                <span>News Update</span>
+              </div>
+              <ul id="news-flash">
+                <li data-update="item1">
+                  <p>Nirmala Sitharaman seeks Parliament nod for additional spending of Rs 21,246 crore. </p>
+                </li>
+                <li data-update="item2">
+                  <p>The Finance Minister sought Parliament nod for additional spending of Rs 21,246.16 crore,</p>
+                </li>
+                <li data-update="item3">
+                  <p>including over Rs 8,820 crore for the newly formed union territories of Jammu and Kashmir and
+                    Ladakh,</p>
+                </li>
+                <li data-update="item4">
+                  <p>in the first batch of supplementary demands.</p>
+                </li>
+                <li data-update="item5">
+                  <p>Finance ministers of Delhi, Punjab, Puducherry and MP,</p>
+                </li>
+                <li data-update="item6">
+                  <p>and representatives of Kerala, Rajasthan, Chhattisgarh and West Bengal met Nirmala Sitharaman and
+                  </p>
+                </li>
+                <li data-update="item7">
+                  <p>said the delay in GST compensation transfer has put them in an acute financial position. </p>
+                </li>
+                <li data-update="item8">
+                  <p>FM Sitharaman had in September announced corporate tax rate cut from an effective 35% (including
+                    surcharges and cesses)</p>
+                </li>
+                <li data-update="item9">
+                  <p>to an effective 25.17% while the rate for new manufacturing companies reduced to 15% from 25%.</p>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crypto Slider -->
+        <div class="col-md-12">
+          <div class="ms-panel">
+            <div class="ms-panel-body p-0 ms-crypto-overview-slider">
+              <div class="ms-crypto-overview">
+                <i class="cc BTC"></i>
+                <span>GOLD ₹39,060</span>
+              </div>
+              <div class="ms-crypto-overview">
+                <i class="cc LTC"></i>
+                <span>SILVER ₹5,519</span>
+              </div>
+              <div class="ms-crypto-overview">
+                <i class="cc ETH"></i>
+                <span>ETH ₹1,119</span>
+              </div>
+              <div class="ms-crypto-overview">
+                <i class="cc PPC-alt"></i>
+                <span>PPC ₹1,119</span>
+              </div>
+              <div class="ms-crypto-overview">
+                <i class="cc ZEC-alt"></i>
+                <span>ZEC ₹1,119</span>
+              </div>
+              <div class="ms-crypto-overview">
+                <i class="cc XLM"></i>
+                <span>XLM ₹1,119</span>
+              </div>
+              <div class="ms-crypto-overview">
+                <i class="cc KOBO"></i>
+                <span>KOBO ₹1,119</span>
+              </div>
+              <div class="ms-crypto-overview">
+                <i class="cc ADA-alt"></i>
+                <span>ADA ₹1,119</span>
+              </div>
+              <div class="ms-crypto-overview">
+                <i class="cc AMP"></i>
+                <span>AMP ₹1,119</span>
+              </div>
+              <div class="ms-crypto-overview">
+                <i class="cc EOS-alt"></i>
+                <span>EOS ₹1,119</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infographics -->
+        <div class="col-xl-3 col-sm-6 col-md-6">
+          <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+            <div class="ms-card-body media">
+              <i class="cc BTC"></i>
+              <div class="media-body">
+                <span>1 BTC = ₹4,500</span>
+                <h2>Bitcoin</h2>
+              </div>
+            </div>
+            <canvas id="bitcoin-chart"></canvas>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-md-6">
+          <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+            <div class="ms-card-body media">
+              <i class="cc ETH"></i>
+              <div class="media-body">
+                <span>1 ETH = ₹500</span>
+                <h2>Ethereum</h2>
+              </div>
+            </div>
+            <canvas id="ethereum-chart"></canvas>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-md-6">
+          <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+            <div class="ms-card-body media">
+              <i class="cc ZEC-alt"></i>
+              <div class="media-body">
+                <span>1 ZEC = ₹1,500</span>
+                <h2>ZCash</h2>
+              </div>
+            </div>
+            <canvas id="zcash-chart"></canvas>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-md-6">
+          <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+            <div class="ms-card-body media">
+              <i class="cc PPC-alt"></i>
+              <div class="media-body">
+                <span>1 PPC = ₹1,100</span>
+                <h2>Peercoin</h2>
+              </div>
+            </div>
+            <canvas id="peercoin-chart"></canvas>
+          </div>
+        </div>
+
+        <!-- Bitcoin rating graph -->
+        <div class="col-xl-7 col-md-12">
+          <div class="ms-panel ms-panel-fh ms-crypto-rating">
+            <div class="ms-panel-header header-mini">
+              <div class="d-flex justify-content-between">
+                <div class="ms-header-text">
+                  <h6>Crop Price Rating Graph</h6>
+                </div>
+              </div>
+              <!-- <div class="dropdown">
+                <a href="#" class="has-chevron" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="cc BTC"></i> Bitcoin
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="ms-dropdown-list">
+                    <a class="media p-2" href="#">
+                      <div class="media-body">
+                        <span>Ethereum</span>
+                      </div>
+                    </a>
+                    <a class="media p-2" href="#">
+                      <div class="media-body">
+                        <span>ZCash</span>
+                      </div>
+                    </a>
+                    <a class="media p-2" href="#">
+                      <div class="media-body">
+                        <span>Peer Coin</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div> -->
+            </div>
+            <div class="ms-panel-body">
+              <!-- <canvas id="crypto-rating-graph"></canvas> -->
+            
+              
+              <form class=" from-inline form-group" method="post" action={% url "graph:mystic"   %}>
+                  {% csrf_token %}
+
+                  <label for="CropName"> CropName  :</label>
+                  <input type="text" name="CropName" placeholder="CropName" >
+                  
+                  <label for="CropVariety">CropVariety:</label>
+                  <input type="CropVariety" name="CropVariety" placeholder="CropVariety">
+                      
+                  <input class=" btn-primary w-25 " type="submit" name="submit" value="submit">
+              </form>
+              <b class="text-primary">CropName</b> : {{CropName}} <b class="text-primary">CropVariety</b>: {{CropVariety}}
+            </br></br>
+
+<!---------------------------------------------------------------------------------------------------------->
+                
+                
+                <script>
+
+
+                  window.onload = function () {
+
+                    var dps = [];
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                      exportEnabled: true,
+                      title: {
+                        text: "Current Market Price"
+                      },
+                      axisY: {
+                        includeZero: false
+                      },
+                      data: [{
+                        type: "spline",
+                        markerSize: 0,
+                        dataPoints: dps
+                      }]
+                    });
+                    var xVal = 0;
+                    var yVal = 100;
+                    var updateInterval = 1;
+                    var dataLength = {{timestamp|length}};
+                    var date = ''
+                    var report = function (value){
+                        date = value
+                    }
+
+
+                    var updateChart = function (count) {
+                      count = count || 1;
+                      {% for i in timestamp.08  %}
+                          dps.push({
+                              x: {{i}},
+                              y: {{timestamp.08|get_item:i}}
+                            });
+                        
+                      {% endfor %}
+                      chart.render();
+                    };
+
+                    updateChart(dataLength);
+
+                  }
+                </script>
+
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            
+      <!---------------------------------------------------------------------------------------------------------->
+                
+
+            </div>
+          </div>
+        </div>
+
+        <!-- News Highlightsy -->
+        <!-- Crypto Market Position -->
+        <div class="col-xl-5 col-md-12">
+          <div class="ms-panel ms-widget ms-crypto-widget">
+            <div class="ms-panel-header">
+              <h6>Crypto Market Position</h6>
+              <p>Market Value and Position of Cryptocurrency</p>
+            </div>
+            <div class="ms-panel-body p-0">
+              <ul class="nav nav-tabs nav-justified has-gap px-4 pt-4" role="tablist">
+                <li role="presentation" class="fs-12"><a href="#btc" aria-controls="btc" class="active show" role="tab"
+                    data-toggle="tab"> BTC </a></li>
+                <li role="presentation" class="fs-12"><a href="#xrp" aria-controls="xrp" role="tab" data-toggle="tab">
+                    XRP </a></li>
+                <li role="presentation" class="fs-12"><a href="#ltc" aria-controls="ltc" role="tab" data-toggle="tab">
+                    LTC </a></li>
+                <li role="presentation" class="fs-12"><a href="#eth" aria-controls="eth" role="tab" data-toggle="tab">
+                    ETH </a></li>
+                <li role="presentation" class="fs-12"><a href="#zec" aria-controls="zec" role="tab" data-toggle="tab">
+                    ZEC </a></li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active show fade in" id="btc">
+                  <div class="table-responsive">
+                    <table class="table table-hover thead-light">
+                      <thead>
+                        <tr>
+                          <th scope="col">Country</th>
+                          <th scope="col">Value</th>
+                          <th scope="col">Position</th>
+                          <th scope="col">Volume</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>United Kingdom</td>
+                          <td>8528.70</td>
+                          <td class="ms-text-success">+17.24%</td>
+                          <td>7.65%</td>
+                        </tr>
+                        <tr>
+                          <td>United States</td>
+                          <td>4867.41</td>
+                          <td class="ms-text-danger">-12.24%</td>
+                          <td>9.12%</td>
+                        </tr>
+                        <tr>
+                          <td>Australia</td>
+                          <td>7538.90</td>
+                          <td class="ms-text-success">+32.04%</td>
+                          <td>14.29%</td>
+                        </tr>
+                        <tr>
+                          <td>Netherlands</td>
+                          <td>1614.19</td>
+                          <td class="ms-text-danger">-20.75%</td>
+                          <td>12.25%</td>
+                        </tr>
+                        <tr>
+                          <td>Russia</td>
+                          <td>7538.90</td>
+                          <td class="ms-text-success">+32.04%</td>
+                          <td>14.29%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="xrp">
+                  <div class="table-responsive">
+                    <table class="table table-hover thead-light">
+                      <thead>
+                        <tr>
+                          <th scope="col">Country</th>
+                          <th scope="col">Value</th>
+                          <th scope="col">Position</th>
+                          <th scope="col">Volume</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>United Kingdom</td>
+                          <td>7548.70</td>
+                          <td class="ms-text-success">+12.24%</td>
+                          <td>7.65%</td>
+                        </tr>
+                        <tr>
+                          <td>United States</td>
+                          <td>3167.41</td>
+                          <td class="ms-text-danger">-4.24%</td>
+                          <td>9.12%</td>
+                        </tr>
+                        <tr>
+                          <td>Australia</td>
+                          <td>7538.90</td>
+                          <td class="ms-text-success">+14.04%</td>
+                          <td>14.29%</td>
+                        </tr>
+                        <tr>
+                          <td>Netherlands</td>
+                          <td>1614.19</td>
+                          <td class="ms-text-danger">-12.75%</td>
+                          <td>12.25%</td>
+                        </tr>
+                        <tr>
+                          <td>Russia</td>
+                          <td>7538.90</td>
+                          <td class="ms-text-success">+32.04%</td>
+                          <td>14.29%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="ltc">
+                  <div class="table-responsive">
+                    <table class="table table-hover thead-light">
+                      <thead>
+                        <tr>
+                          <th scope="col">Country</th>
+                          <th scope="col">Value</th>
+                          <th scope="col">Position</th>
+                          <th scope="col">Volume</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>United Kingdom</td>
+                          <td>8528.70</td>
+                          <td class="ms-text-success">+17.24%</td>
+                          <td>7.65%</td>
+                        </tr>
+                        <tr>
+                          <td>United States</td>
+                          <td>4867.41</td>
+                          <td class="ms-text-danger">-12.24%</td>
+                          <td>9.12%</td>
+                        </tr>
+                        <tr>
+                          <td>Australia</td>
+                          <td>7538.90</td>
+                          <td class="ms-text-success">+32.04%</td>
+                          <td>14.29%</td>
+                        </tr>
+                        <tr>
+                          <td>Netherlands</td>
+                          <td>1614.19</td>
+                          <td class="ms-text-danger">-20.75%</td>
+                          <td>12.25%</td>
+                        </tr>
+                        <tr>
+                          <td>Russia</td>
+                          <td>7538.90</td>
+                          <td class="ms-text-success">+32.04%</td>
+                          <td>14.29%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="eth">
+                  <div class="table-responsive">
+                    <table class="table table-hover thead-light">
+                      <thead>
+                        <tr>
+                          <th scope="col">Country</th>
+                          <th scope="col">Value</th>
+                          <th scope="col">Position</th>
+                          <th scope="col">Volume</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>United Kingdom</td>
+                          <td>7548.70</td>
+                          <td class="ms-text-success">+12.24%</td>
+                          <td>7.65%</td>
+                        </tr>
+                        <tr>
+                          <td>United States</td>
+                          <td>3167.41</td>
+                          <td class="ms-text-danger">-4.24%</td>
+                          <td>9.12%</td>
+                        </tr>
+                        <tr>
+                          <td>Australia</td>
+                          <td>7538.90</td>
+                          <td class="ms-text-success">+14.04%</td>
+                          <td>14.29%</td>
+                        </tr>
+                        <tr>
+                          <td>Netherlands</td>
+                          <td>1614.19</td>
+                          <td class="ms-text-danger">-12.75%</td>
+                          <td>12.25%</td>
+                        </tr>
+                        <tr>
+                          <td>Russia</td>
+                          <td>7538.90</td>
+                          <td class="ms-text-success">+32.04%</td>
+                          <td>14.29%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="zec">
+                  <div class="table-responsive">
+                    <table class="table table-hover thead-light">
+                      <thead>
+                        <tr>
+                          <th scope="col">Country</th>
+                          <th scope="col">Value</th>
+                          <th scope="col">Position</th>
+                          <th scope="col">Volume</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>United Kingdom</td>
+                          <td>8528.70</td>
+                          <td class="ms-text-success">+17.24%</td>
+                          <td>7.65%</td>
+                        </tr>
+                        <tr>
+                          <td>United States</td>
+                          <td>4867.41</td>
+                          <td class="ms-text-danger">-12.24%</td>
+                          <td>9.12%</td>
+                        </tr>
+                        <tr>
+                          <td>Australia</td>
+                          <td>7538.90</td>
+                          <td class="ms-text-success">+32.04%</td>
+                          <td>14.29%</td>
+                        </tr>
+                        <tr>
+                          <td>Netherlands</td>
+                          <td>1614.19</td>
+                          <td class="ms-text-danger">-20.75%</td>
+                          <td>12.25%</td>
+                        </tr>
+                        <tr>
+                          <td>Russia</td>
+                          <td>7538.90</td>
+                          <td class="ms-text-success">+32.04%</td>
+                          <td>14.29%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+              <h6>Quick Stats</h6>
+            </div>
+            <div class="ms-panel-body p-0">
+              <div class="ms-quick-stats">
+                <div class="ms-stats-grid">
+                  <i class="cc BTC"></i>
+                  <p class="ms-text-dark">₹8,033</p>
+                  <span>Bitcoin</span>
+                </div>
+                <div class="ms-stats-grid">
+                  <i class="cc ETH"></i>
+                  <p class="ms-text-dark">₹3,039</p>
+                  <span>Ethereum</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Orders Table Expanded -->
+        <div class="col-md-12">
+          <div class="ms-panel ms-crypto-orders-expanded">
+            <div class="ms-panel-header">
+              <div class="d-flex justify-content-between">
+                <div class="ms-header-text">
+                  <h6>Active Orders</h6>
+                  <p>Track your active orders</p>
+                </div>
+                <a href="#" class="btn btn-primary ms-graph-metrics">View All</a>
+              </div>
+            </div>
+            <div class="ms-panel-body p-0">
+              <div class="table-responsive">
+                <table class="table table-hover thead-light">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Track ID</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Crypto Amount</th>
+                      <th scope="col">Change</th>
+                      <th scope="col">Fees</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12.01.2019</td>
+                      <td>Sent</td>
+                      <td>#TR137381</td>
+                      <td>₹900.50</td>
+                      <td class="ms-crypto-amount"> <i class="cc BTC"></i> 0.511 </td>
+                      <td class="ms-trend"> <canvas id="trend-01"></canvas> </td>
+                      <td>₹5.85</td>
+                    </tr>
+                    <tr>
+                      <td>11.01.2019</td>
+                      <td>Sent</td>
+                      <td>#TR371893</td>
+                      <td>₹335.50</td>
+                      <td class="ms-crypto-amount"> <i class="cc ETH"></i> 0.223 </td>
+                      <td class="ms-trend"> <canvas id="trend-02"></canvas> </td>
+                      <td>₹5.85</td>
+                    </tr>
+                    <tr>
+                      <td>10.01.2019</td>
+                      <td>Sent</td>
+                      <td>#TR137381</td>
+                      <td>₹378.50</td>
+                      <td class="ms-crypto-amount"> <i class="cc PPC-alt"></i> 0.312 </td>
+                      <td class="ms-trend"> <canvas id="trend-03"></canvas> </td>
+                      <td>₹5.85</td>
+                    </tr>
+                    <tr>
+                      <td>09.01.2019</td>
+                      <td>Recieved</td>
+                      <td>#TR371893</td>
+                      <td>₹219.30</td>
+                      <td class="ms-crypto-amount"> <i class="cc PPC-alt"></i> 0.573 </td>
+                      <td class="ms-trend"> <canvas id="trend-04"></canvas> </td>
+                      <td>₹5.85</td>
+                    </tr>
+                    <tr>
+                      <td>08.01.2019</td>
+                      <td>Recieved</td>
+                      <td>#TR137381</td>
+                      <td>₹438.50</td>
+                      <td class="ms-crypto-amount"> <i class="cc BTC"></i> 0.321 </td>
+                      <td class="ms-trend"> <canvas id="trend-05"></canvas> </td>
+                      <td>₹5.85</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- MODALS -->
+
+  <!-- Reminder Modal -->
+  <div class="modal fade" id="reminder-modal" tabindex="-1" role="dialog" aria-labelledby="reminder-modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header bg-secondary">
+          <h5 class="modal-title has-icon text-white"> New Reminder</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+        </div>
+
+        <form>
+
+          <div class="modal-body">
+
+            <div class="ms-form-group">
+              <label>Remind me about</label>
+              <textarea class="form-control" name="reminder"></textarea>
+            </div>
+
+            <div class="ms-form-group">
+              <span class="ms-option-name fs-14">Repeat Daily</span>
+              <label class="ms-switch float-right">
+                <input type="checkbox">
+                <span class="ms-switch-slider round"></span>
+              </label>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="ms-form-group">
+                  <input type="text" class="form-control datepicker" name="reminder-date" value="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="ms-form-group">
+                  <select class="form-control" name="reminder-time">
+                    <option value="">12:00 pm</option>
+                    <option value="">1:00 pm</option>
+                    <option value="">2:00 pm</option>
+                    <option value="">3:00 pm</option>
+                    <option value="">4:00 pm</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Add Reminder</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes Modal -->
+  <div class="modal fade" id="notes-modal" tabindex="-1" role="dialog" aria-labelledby="notes-modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header bg-secondary">
+          <h5 class="modal-title has-icon text-white" id="NoteModal">New Note</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+        </div>
+
+        <form>
+
+          <div class="modal-body">
+
+            <div class="ms-form-group">
+              <label>Note Title</label>
+              <input type="text" class="form-control" name="note-title" value="">
+            </div>
+
+            <div class="ms-form-group">
+              <label>Note Description</label>
+              <textarea class="form-control" name="note-description"></textarea>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Add Note</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <!-- Global Required Scripts Start -->
+  <script src="../../../static/graph/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../../../static/graph/assets/js/popper.min.js"></script>
+  <script src="../../../static/graph/assets/js/bootstrap.min.js"></script>
+  <script src="../../../static/graph/assets/js/perfect-scrollbar.js"> </script>
+  <script src="../../../static/graph/assets/js/jquery-ui.min.js"> </script>
+  <!-- Global Required Scripts End -->
+
+  <!-- Page Specific Scripts Start -->
+  <script src="../../../static/graph/assets/js/slick.min.js"> </script>
+  <script src="../../../static/graph/assets/js/moment.js"> </script>
+  <script src="../../../static/graph/assets/js/jquery.webticker.min.js"> </script>
+  <script src="../../../static/graph/assets/js/Chart.bundle.min.js"> </script>
+  <script src="../../../static/graph/assets/js/Chart.Financial.js"> </script>
+  <script src="../../../static/graph/assets/js/cryptocurrency.js"> </script>
+  <script src="../../../static/graph/assets/js/framework.js"></script>
+  <!-- <script src="assets/js/settings.js"></script> -->
+
+</body>
+
+</html>

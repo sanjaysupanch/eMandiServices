@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=o17(mz-k*55ou1!5@psy*-fof5nc8_=+kcj5+f&8km7%t!&zw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'futures',
     'farmer_panchayat',
+    'graph',
 ]
 
 MIDDLEWARE = [
